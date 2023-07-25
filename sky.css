@@ -1,0 +1,563 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+  width: 100%;
+}
+
+/*-----General-----*/
+
+body {
+  display: flex;
+  flex-flow: column;
+  justify-content: space-between;
+  align-items: stretch;
+  align-content: space-between;
+  background: url('resources/images/annie-spratt.avif') no-repeat center center/ cover;
+  min-width: 320px;
+  margin-left: 0px;
+  width: 100%;
+}
+
+.bordered {
+  background: url('resources/images/han-wen.avif') no-repeat center center / cover;
+  border-top: double 2px azure;
+  border-bottom: double 2px azure;
+}
+
+img:hover {
+  cursor: crosshair;
+}
+
+/*-----Font.Stylish-----*/
+
+div span{
+  font-family: 'Poiret One', cursive;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+#at {
+  color: aquamarine;
+  font-family: 'Tourney', cursive;
+  font-weight: bold;
+}
+
+#matt {
+  color: azure;
+}
+
+#dot {
+  color:orangered;
+  font-size: 4rem;
+}
+
+#bracket {
+  color:lightcoral;
+  font-family: 'Courier New', Courier, monospace;
+
+}
+
+#infinity {
+  color: aquamarine;
+  font-family: 'Rubik Moonrocks', cursive;
+}
+
+#top-nav a {
+  font-family: 'Poiret One', cursive;
+  font-size: 1.4rem;
+  font-weight: bold;
+}
+
+h1 {
+  font-family: 'Sacramento', cursive;
+  font-size: 3.2rem;
+  font-weight: lighter;
+}
+
+header p , header a {
+  font-family: 'Raleway', sans-serif;
+  font-size: 1.2rem;
+}
+
+p {
+  font-family: 'Raleway', sans-serif;
+  font-size: 1rem;
+}
+
+h2 {
+  font-family: 'Raleway Dots', cursive;
+  font-size: 2.5rem;
+  font-weight: normal;
+}
+
+h3 {
+  font-family: 'Raleway Dots', sans-serif;
+  font-size: 1.5rem;
+  font-weight: normal;
+}
+
+figcaption {
+  font-family: 'Poiret One', cursive;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+li figcaption {
+  font-family: 'Tourney', cursive;
+  font-size: 1rem;
+}
+
+/*font-family: 'Josefin Slab', serif;
+font-family: 'League Script', cursive;
+font-family: 'Poiret One', cursive;
+font-family: 'Raleway', sans-serif;
+font-family: 'Raleway Dots', cursive;
+font-family: 'Rouge Script', cursive;
+font-family: 'Rubik Moonrocks', cursive;
+font-family: 'Sacramento', cursive;
+font-family: 'Tourney', cursive;*/
+
+/*---Header.Section---*/
+
+#top-nav {
+  display: flex;
+  flex-flow: wrap;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  color: azure;
+  z-index: 3;
+}
+
+#my-icon {
+  margin-left: 10px;
+  display: flex;
+  align-items: center;
+  padding: 0;
+}
+
+#my-icon div {
+  position: relative;
+  bottom: 15px;
+  margin: 0;
+  padding: 0;
+}
+
+#top-nav img {
+  max-height: 60px;
+  margin: 0 7px;
+}
+
+#top-nav ul {
+  display: flex;
+  flex-flow: wrap;
+  list-style: circle;
+  margin: 0;
+}
+
+#top-nav li {
+  margin: 0 15px;
+  position: relative;
+  right: 30px;
+}
+
+#top-nav a {
+  color: azure;
+}
+
+#top-nav .widget {
+  margin-right: 5px;
+}
+
+.widget {
+  display: flex;
+  align-items: center;
+  align-content: stretch;
+  filter: grayscale(30%)
+}
+
+#music, #language, #theme {
+  margin: 10px 0 10px 0;
+  text-align: center;
+  width: 50px;
+  height: auto;
+}
+
+#music img, #language img, #theme img {
+  margin: 0;
+  padding: 0;
+  width: 95%;
+  height: auto;
+}
+
+header {
+  background: url(resources/images/patrick-tomasso.avif) no-repeat center center/ cover;
+  display: flex;
+  flex-flow: wrap column;
+  justify-content: center;
+  align-items: flex-start;
+  height: 800px;
+  width: 100%;
+  border-top: dashed 2px azure;
+  border-bottom: dashed 2px azure;
+  margin-right: 5px;
+  color: black;
+}
+
+header p, h1 , header a {
+  margin: 0px 55px 50px;
+  background-color: hsla(33, 54%, 53%, 0.725);
+  border: double 5px azure;
+  border-top-left-radius: 255px 15px;
+  border-top-right-radius: 15px 225px;
+  border-bottom-right-radius: 225px 15px;
+  border-bottom-left-radius:15px 255px;
+  padding: 5px;
+}
+
+header h1 {
+  margin: 10px 55px;
+}
+
+header p {
+  margin: 10px 55px;
+}
+
+/*---Main.Section---*/
+
+main {
+  color: azure;
+  width: 100%;
+}
+
+/*---Skill&Tech.Section---*/
+
+#skill-tech {
+  text-align: center;
+  display: flex;
+  justify-content: space-around;
+  margin: 5px;
+}
+
+h2 {
+  border-top: double 3px azure;
+  border-right: double 3px azure;
+  border-bottom: double 3px azure;
+  text-align: center;
+  max-width: 320px;
+}
+
+/*---Tech.SubSection---*/
+
+#technology {
+  border-left: double 2px azure;
+  display: flex;
+  flex-flow: wrap;
+  justify-content: space-around;
+  padding: 0;
+  margin: 0;
+  overflow: auto;
+}
+
+#skill-tech h3 {
+  writing-mode: vertical-rl;
+  text-orientation:upright ;
+  padding: 0;
+  margin: 0;
+  text-align: start;
+  position: relative;
+  top: 50px;
+}
+
+#technology img {
+  max-width: 90px;
+  padding: 0;
+  margin: 0;
+}
+
+/*---Skill.SubSection---*/
+
+#skill {
+  border-left: double 2px azure;
+  text-align: left;
+  padding: 0;
+  margin: 0;
+}
+
+#skill li {
+  display: flex;
+  flex-flow: wrap;
+  justify-content: flex-start;
+  padding: 0;
+  margin: 0;
+}
+
+#skill figure {
+  align-items: center;
+  padding: 0;
+  margin: 0 10px 0 0;
+}
+
+#skill img {
+  width: 47px;
+  padding: 0;
+  margin: 0;
+}
+
+#skill figcaption {
+  display: block;
+  position: absolute;
+  padding: 0;
+  margin: 0;
+  opacity: 0;
+}
+
+#skill li p {
+  margin-left: 15px;
+}
+
+/*---Project.Section---*/
+
+#experience {
+  border-top: solid 3px;
+  background: url(resources/images/bg-image-2.webp) no-repeat center center/cover;
+  display: flex;
+  flex-flow: wrap;
+  justify-content: space-around;
+  width: 100%;
+  margin: 0;
+}
+
+#experience figure {
+  padding: 0;
+  margin: 5px;
+  max-width: 900px;
+  margin: 10px;
+  height: auto;
+}
+
+#experience figcaption {
+  max-width: 95%;
+}
+
+#experience img {
+  max-width: 95%;
+  margin: 5px;
+  border: double 3px azure;
+  border-radius: 10px;
+}
+
+/*---Footer.Section---*/
+
+footer {
+  display: flex;
+  flex-flow: wrap;
+  justify-content: space-between;
+  align-items: center;
+  color: azure;
+  border-top: solid 3px;
+  border-bottom: solid 3px;
+  width: 100%;
+  overflow: hidden;
+  margin: 0;
+}
+
+footer p {
+  width: 20%;
+  text-align: center;
+}
+
+#show {
+  width: 47%;
+  overflow: hidden;
+  margin: 0;
+}
+
+#show img {
+  width: 100%;
+  max-height: 300px;
+  overflow: hidden;
+}
+
+#contacts {
+  text-align: center;
+  width: 20%;
+}
+
+#contacts ul {
+  display: flex;
+  flex-flow: wrap;
+  list-style: none;
+  justify-content: space-around;
+}
+
+#contacts textarea {
+  width: 320px;
+  height: 190px;
+  background: transparent;
+  margin: 5px 0 0 15px;
+}
+
+#contacts li {
+  padding-right: 10px;
+}
+
+#messaging {
+  display: block;
+} 
+
+/*---Extras---*/
+
+strong:hover {
+  cursor: crosshair;
+}
+
+#p-credit {
+  position: relative;
+  top: 30%;
+  border: none;
+  font-size: 0.9rem;
+  text-decoration: underline;
+  color: black;
+}
+
+#side-bar {
+  position: fixed;
+  top: 35%;
+  right: 3px;
+  color: azure;
+  padding: 0;
+  margin: 0;
+}
+
+#side-bar ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+/*---Queries---*/
+
+@media only screen and (max-width: 830px) {
+  #top-nav {
+    justify-content: space-evenly;
+  }
+}
+
+@media only screen and (max-width: 680px) {
+  body {
+    margin: 2px;
+  }
+
+  main {
+    margin: 0;
+    text-align: center;
+    color: azure;
+  }
+
+#top-nav a {
+  font-size: 1.3rem;
+}
+
+header {
+  max-height: 600px;
+}
+
+h2 {
+  border: none;
+}
+
+h2::before {
+  content: "";
+  display: block;
+  height: 50px;
+}
+
+#technology img {
+  max-width: 100px;
+}
+
+  #experience {
+    display: block;
+    text-align: center;
+  }
+
+  #experience figure {
+    min-width: 390px;
+    margin: 0;
+  }
+
+  #side-bar {
+    position: fixed;
+    max-height: 50px;
+    width: 100%;
+    top: 95%;
+    bottom: 0;
+    left: 0;
+    background: url('resources/images/han-wen.avif') no-repeat center center / cover;
+    border-top: double 3px azure;
+    border-bottom: double 3px azure;
+    padding: 0;
+  }
+  #side-bar ul {
+    position: relative;
+    bottom: 12px;
+    display: flex;
+    flex-flow: wrap;
+    list-style: none;
+    justify-content: space-around;
+    margin: 0;
+    padding: 0;
+  }
+
+  #side-bar li {
+    padding: 0;
+    padding-right: 10px;
+  }
+  
+  footer {
+    padding-bottom: 40px;
+  }
+
+  h1 {
+    font-family: 'Sacramento', cursive;
+    font-size: 2.2rem;
+    font-weight: lighter;
+  }
+  
+  header p {
+    font-family: 'Raleway', sans-serif;
+    font-size: 1rem;
+  }
+}
+
+@media only screen and (max-width: 1948px) {
+  #experience figure {
+    max-width: 750px;
+  }
+}
+
+@media only screen and (max-width: 1640px) {
+  #experience figure {
+    max-width: 900px; 
+  }
+}
+
+@media only screen and (max-width: 1640px) {
+  #messaging textarea {
+    width: 100%;
+    height: 120px;
+  }
+}
+/* border: double 7px azure;
+  border-top-left-radius: 255px 15px;
+  border-top-right-radius: 15px 225px;
+  border-bottom-right-radius: 225px 15px;
+  border-bottom-left-radius:15px 255px;*/
