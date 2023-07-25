@@ -4,7 +4,7 @@
 
 html {
   font-size: 16px;
-  width: 100%;
+
 }
 
 /*-----General-----*/
@@ -14,11 +14,12 @@ body {
   flex-flow: column;
   justify-content: space-between;
   align-items: stretch;
-  align-content: space-between;
+  align-content: stretch;
   background: url('resources/images/annie-spratt.avif') no-repeat center center/ cover;
   min-width: 320px;
   margin-left: 0px;
   width: 100%;
+  border-right: double 5px azure;
 }
 
 .bordered {
@@ -89,20 +90,32 @@ p {
 
 h2 {
   font-family: 'Raleway Dots', cursive;
-  font-size: 2.5rem;
+  font-size: 2.8rem;
   font-weight: normal;
 }
 
 h3 {
   font-family: 'Raleway Dots', sans-serif;
   font-size: 1.5rem;
+  font-weight: bold;
+  color:rgb(127, 255, 255);
+}
+
+h4 {
+  font-family: 'Josefin Slab', serif;
+  font-size: 1.4rem;
   font-weight: normal;
+  text-decoration:underline;
 }
 
 figcaption {
   font-family: 'Poiret One', cursive;
   font-size: 1rem;
   font-weight: 600;
+}
+
+#experience figcaption {
+  font-size: 1.2rem;
 }
 
 li figcaption {
@@ -203,7 +216,7 @@ header {
   flex-flow: wrap column;
   justify-content: center;
   align-items: flex-start;
-  height: 800px;
+  height: 850px;
   width: 100%;
   border-top: dashed 2px azure;
   border-bottom: dashed 2px azure;
@@ -291,6 +304,10 @@ h2 {
   margin: 0;
 }
 
+#skill h4 {
+ margin: 10px;
+}
+
 #skill li {
   display: flex;
   flex-flow: wrap;
@@ -320,7 +337,8 @@ h2 {
 }
 
 #skill li p {
-  margin-left: 15px;
+  margin: 10px 10px 10px 25px;
+  padding: 0;
 }
 
 /*---Project.Section---*/
@@ -341,6 +359,7 @@ h2 {
   max-width: 900px;
   margin: 10px;
   height: auto;
+  text-align: center;
 }
 
 #experience figcaption {
@@ -449,11 +468,29 @@ strong:hover {
   #top-nav {
     justify-content: space-evenly;
   }
+
+  #skill-tech {
+    flex-flow: column wrap;
+  }
+
+  #technology img {
+   width: 50px;
+  }
+
+  #skill-tech h3 {
+    writing-mode: horizontal-tb;
+    text-orientation:upright ;
+    padding: 0;
+    margin: 0;
+    text-align: start;
+    position: relative;
+    top: 0px;
+  }
 }
 
 @media only screen and (max-width: 680px) {
   body {
-    margin: 2px;
+    margin: 0;
   }
 
   main {
@@ -462,27 +499,31 @@ strong:hover {
     color: azure;
   }
 
-#top-nav a {
-  font-size: 1.3rem;
-}
+  #top-nav a {
+    font-size: 1.3rem;
+  }
 
-header {
-  max-height: 600px;
-}
+  header {
+    max-height: 600px;
+  }
 
-h2 {
-  border: none;
-}
+  h2 {
+    border: none;
+  }
 
-h2::before {
-  content: "";
-  display: block;
-  height: 50px;
-}
+  h2::before {
+    content: "";
+    display: block;
+    height: 50px;
+  }
 
-#technology img {
-  max-width: 100px;
-}
+  #skill {
+    text-align: right;
+  }
+
+  #technology img {
+    max-width: 100px;
+  }
 
   #experience {
     display: block;
@@ -497,7 +538,7 @@ h2::before {
   #side-bar {
     position: fixed;
     max-height: 50px;
-    width: 100%;
+    max-width: 100%;
     top: 95%;
     bottom: 0;
     left: 0;
@@ -508,7 +549,7 @@ h2::before {
   }
   #side-bar ul {
     position: relative;
-    bottom: 12px;
+    bottom: 20px;
     display: flex;
     flex-flow: wrap;
     list-style: none;
@@ -556,6 +597,7 @@ h2::before {
     height: 120px;
   }
 }
+
 /* border: double 7px azure;
   border-top-left-radius: 255px 15px;
   border-top-right-radius: 15px 225px;
