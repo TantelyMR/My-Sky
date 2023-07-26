@@ -2,7 +2,7 @@
 const topNav = document.querySelector('#top-nav');
 const sideBar = document.querySelector('#side-bar');
 const header = document.querySelector('header');
-const technology = document.querySelector('#technology');
+//const technology = document.querySelector('#technology');
 
 function navBackgroundColor() {
   topNav.classList.toggle('bordered', window.scrollY > header.offsetHeight);
@@ -47,3 +47,11 @@ document.addEventListener('DOMContentLoaded', function () {
   });
 }
 );
+
+const headerWelcome = document.querySelector('header h1');
+
+function changeWelcome() {
+  this.innerHTML = (this.innerHTML === 'Welcome!') ? 'Bienvenue!' : 'Welcome!';
+}
+
+headerWelcome.addEventListener('mouseover', changeWelcome);

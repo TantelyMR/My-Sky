@@ -4,7 +4,6 @@
 
 html {
   font-size: 16px;
-
 }
 
 /*-----General-----*/
@@ -15,7 +14,7 @@ body {
   justify-content: space-between;
   align-items: stretch;
   align-content: stretch;
-  background: url('resources/images/annie-spratt.avif') no-repeat center center/ cover;
+  background: url('resources/images/annie-spratt.avif') center center/ cover;
   min-width: 320px;
   margin-left: 0px;
   width: 100%;
@@ -28,10 +27,6 @@ body {
   border-bottom: double 2px azure;
 }
 
-img:hover {
-  cursor: crosshair;
-}
-
 /*-----Font.Stylish-----*/
 
 div span{
@@ -41,17 +36,17 @@ div span{
 }
 
 #at {
-  color: aquamarine;
+  color: rgba(127, 255, 212, 0.771);
   font-family: 'Tourney', cursive;
   font-weight: bold;
 }
 
 #matt {
-  color: azure;
+  color: rgb(235, 247, 247);
 }
 
 #dot {
-  color:orangered;
+  color:rgba(0, 132, 255, 0.628);
   font-size: 4rem;
 }
 
@@ -70,22 +65,40 @@ div span{
   font-family: 'Poiret One', cursive;
   font-size: 1.4rem;
   font-weight: bold;
+  color: rgba(222, 240, 240, 0.861);
 }
 
 h1 {
   font-family: 'Sacramento', cursive;
-  font-size: 3.2rem;
+  font-size: 5rem;
   font-weight: lighter;
+  color:rgba(0, 0, 0, 0.658);
 }
 
 header p , header a {
   font-family: 'Raleway', sans-serif;
-  font-size: 1.2rem;
+  font-size: 1.4rem;
+  color: rgba(0, 0, 0, 0.86);
+}
+
+#p-credit {
+  text-decoration: underline;
+  font-size: 0.9rem;
+  color: rgba(14, 16, 14, 0.939);
+}
+
+header span {
+  font-family: 'Josefin Slab', serif;
+  color: rgba(0, 0, 0, 0.778);
+  font-size: 1.rem;
+  font-style: italic;
+  font-weight: bolder;
 }
 
 p {
   font-family: 'Raleway', sans-serif;
   font-size: 1rem;
+  color: rgba(255, 255, 255, 0.855);
 }
 
 h2 {
@@ -98,7 +111,7 @@ h3 {
   font-family: 'Raleway Dots', sans-serif;
   font-size: 1.5rem;
   font-weight: bold;
-  color:rgb(127, 255, 255);
+  color:rgba(127, 255, 255, 0.865);
 }
 
 h4 {
@@ -106,21 +119,47 @@ h4 {
   font-size: 1.4rem;
   font-weight: normal;
   text-decoration:underline;
+  color: rgba(193, 243, 241, 0.742);
 }
 
 figcaption {
   font-family: 'Poiret One', cursive;
   font-size: 1rem;
   font-weight: 600;
+  color: rgba(240, 255, 255, 0.71);
 }
 
 #experience figcaption {
-  font-size: 1.2rem;
+  font-family: 'Raleway', sans-serif;
+  font-size: 1rem;
 }
 
 li figcaption {
   font-family: 'Tourney', cursive;
   font-size: 1rem;
+}
+
+footer p {
+  font-family: 'Josefin Slab', serif;
+  font-size: 1.2rem;
+  color: rgba(149, 214, 214, 0.867);
+}
+
+footer label {
+  font-family: 'Josefin Slab', serif;
+  font-size: 1.1rem;
+  color: rgba(240, 255, 255, 0.71);
+}
+
+textarea {
+  font-style: helvetica;
+  color: rgba(240, 255, 255, 0.787);
+}
+
+#copyright {
+  font-family: 'Sacramento', cursive;
+  font-size: 1.1rem;
+  color: rgba(240, 248, 255, 0.618);
 }
 
 /*font-family: 'Josefin Slab', serif;
@@ -145,7 +184,6 @@ font-family: 'Tourney', cursive;*/
   width: 100%;
   margin: 0;
   padding: 0;
-  color: azure;
   z-index: 3;
 }
 
@@ -181,10 +219,6 @@ font-family: 'Tourney', cursive;*/
   right: 30px;
 }
 
-#top-nav a {
-  color: azure;
-}
-
 #top-nav .widget {
   margin-right: 5px;
 }
@@ -193,7 +227,7 @@ font-family: 'Tourney', cursive;*/
   display: flex;
   align-items: center;
   align-content: stretch;
-  filter: grayscale(30%)
+  opacity: 70%;
 }
 
 #music, #language, #theme {
@@ -218,8 +252,8 @@ header {
   align-items: flex-start;
   height: 850px;
   width: 100%;
-  border-top: dashed 2px azure;
-  border-bottom: dashed 2px azure;
+  border-top: double 2px azure;
+  border-bottom: double 2px azure;
   margin-right: 5px;
   color: black;
 }
@@ -323,7 +357,7 @@ h2 {
 }
 
 #skill img {
-  width: 47px;
+  width: 40px;
   padding: 0;
   margin: 0;
 }
@@ -344,8 +378,6 @@ h2 {
 /*---Project.Section---*/
 
 #experience {
-  border-top: solid 3px;
-  background: url(resources/images/bg-image-2.webp) no-repeat center center/cover;
   display: flex;
   flex-flow: wrap;
   justify-content: space-around;
@@ -393,6 +425,12 @@ footer p {
   text-align: center;
 }
 
+footer ul li img {
+  width: 35px;
+  height: auto;
+  filter: grayscale(50%);
+}
+
 #show {
   width: 47%;
   overflow: hidden;
@@ -430,7 +468,11 @@ footer p {
 
 #messaging {
   display: block;
-} 
+}
+
+#copyright {
+  margin: 5px;
+}
 
 /*---Extras---*/
 
@@ -441,10 +483,8 @@ strong:hover {
 #p-credit {
   position: relative;
   top: 30%;
+  left: 1%;
   border: none;
-  font-size: 0.9rem;
-  text-decoration: underline;
-  color: black;
 }
 
 #side-bar {
@@ -482,9 +522,13 @@ strong:hover {
     text-orientation:upright ;
     padding: 0;
     margin: 0;
-    text-align: start;
+    text-align: center;
     position: relative;
     top: 0px;
+    border-top: double 3px azure;
+    border-right: double 3px azure;
+    border-bottom: double 3px azure;
+    max-width: 20%;
   }
 }
 
