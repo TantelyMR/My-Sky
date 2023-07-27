@@ -25,8 +25,8 @@
       </div>
       <ul>
         <li><a href="#">Home</a></li>
-        <li><a href="#skill-tech-title">Skills-&-Tech</a></li>
-        <li><a href="#experience-title">Projects</a></li>
+        <li><a href="#skill-tech-title" id="skill-nav">Skills-&-Tech</a></li>
+        <li><a href="#experience-title" id="exp-nav">Projects</a></li>
       </ul>
 
       <div class="widget" id="side-button">
@@ -39,11 +39,14 @@
     <header>
 
       <h1>Welcome!</h1>
-      <p>My name is <span>Tantely Matthieu</span>, you can call me <strong style="color: rgba(82, 234, 218, 0.659); font-size: 1.7rem; text-decoration: underline; font-family: 'Josefin Slab', serif;">Matt</strong>,<br/>and this is my Software Engineer Portfolio.</p>
+
+      <p>
+        <span>M</span><span>y</span> <span>n</span><span>a</span><span>m</span><span>e</span> <span>i</span><span>s</span> <span id="name">Tantely Matthieu</span><span>,</span> <span>y</span><span>o</span><span>u</span> <span>c</span><span>a</span><span>n</span> <span>c</span><span>a</span><span>l</span><span>l</span> <span>m</span><span>e</span> <span id="nickname">Matt</span><span>,</span><br/><span>a</span><span>n</span><span>d</span> <span>t</span><span>h</span><span>i</span><span>s</span> <span>i</span><span>s</span> <span>m</span><span>y</span> <span>S</span><span>o</span><span>f</span><span>t</span><span>w</span><span>a</span><span>r</span><span>e</span> <span>E</span><span>n</span><span>g</span><span>i</span><span>n</span><span>e</span><span>e</span><span>r</span> <span>P</span><span>o</span><span>r</span><span>t</span><span>f</span><span>o</span><span>l</span><span>i</span><span>o</span><span>.</span>
+      </p>
       <a href="https://unsplash.com/@impatrickt" id="p-credit">Picture by Patrick Tomaso</a>
 
     </header>
-     <!--
+    
     <div id="side-bar" role="background contacts & resume">
       <ul>
         <li><h4>About Me</h4><p></p></li>
@@ -52,20 +55,28 @@
         <li><h4>Education</h4><p></p></li>
       </ul>
     </div>
-    -->
+   
     <main>
       <h2 id="skill-tech-title">Skills & Tech</h2>
       <section id="skill-tech">
         <h3>Technology</h3>
-        <div class="sub-section" id="technology" tabindex="0">
+        <div id="technology" tabindex="0">
           
           <figure>
-            <img src="resources/images/javascript-logo.png" alt="futurist javascript logo">
-            <figcaption>JavaScript</figcaption>
+            <img src="resources/images/mongo-logo.png" alt="futurist mongodb logo">
+            <figcaption>MongoDB</figcaption>
+          </figure>
+          <figure>
+            <img src="resources/images/express-logo.png" alt="futurist express logo">
+            <figcaption>Express.js</figcaption>
           </figure>
           <figure>
             <img src="resources/images/react-logo.png" alt="futurist react logo">
             <figcaption>React & R.Native</figcaption>
+          </figure>
+          <figure>
+            <img src="resources/images/node-logo.png" alt="futurist node logo">
+            <figcaption>Node.js</figcaption>
           </figure>
           <figure>
             <img src="resources/images/redux-logo.png" alt="futurist redux logo">
@@ -74,10 +85,6 @@
           <figure>
             <img src="resources/images/python-logo.png" alt="futurist python3 logo">
             <figcaption>Python</figcaption>
-          </figure>
-          <figure>
-            <img src="resources/images/mongo-logo.png" alt="futurist mongodb logo">
-            <figcaption>MongoDB</figcaption>
           </figure>
           <figure>
             <img src="resources/images/postgre-logo.png" alt="futurist PostgreSQL logo">
@@ -115,19 +122,19 @@
             <img src="resources/images/html5-logo.png" alt="futurist HTML5 logo">
             <figcaption>HTML5</figcaption>
           </figure>
+          <figure>
+            <img src="resources/images/javascript-logo.png" alt="futurist javascript logo">
+            <figcaption>JavaScript</figcaption>
+          </figure>
         </div>
 
         <h3>Skills</h3>
-        <div class="sub-section" id="skill">
+        <div id="skill">
 
           <ul>
             <li>
               <h4>o-Front-End</h4>
               <p>I like to create digital experiences with a special emphasis on interactivity and accessibility. From wireframing to publishing, I like to make sure every step of the process is as organized and elegant as the product itself, so maintenance and future improvements are always smooth and efficient.</p>
-              <figure id="javascript">
-                <img src="resources/images/javascript-logo.png" alt="futurist JavaScript logo">
-                <figcaption>#JavaScript</figcaption>
-              </figure>
               <figure id="react">
                 <img src="resources/images/react-logo.png" alt="futurist React & R.Native logo">
                 <figcaption>#React</figcaption>
@@ -135,6 +142,10 @@
               <figure id="redux">
                 <img src="resources/images/redux-logo.png" alt="futurist Redux logo">
                 <figcaption>#Redux</figcaption>
+              </figure>
+              <figure id="javascript">
+                <img src="resources/images/javascript-logo.png" alt="futurist JavaScript logo">
+                <figcaption>#JavaScript</figcaption>
               </figure>
               <figure id="typescript">
                 <img src="resources/images/typescript-logo.png" alt="futurist TypeScript logo">
@@ -147,6 +158,10 @@
               <figure id="gpt">
                 <img src="resources/images/gpt-logo.png" alt="futurist gpt logo">
                 <figcaption>#GPT</figcaption>
+              </figure>
+              <figure id="github">
+                <img src="resources/images/github-logo.png" alt="futurist Github logo">
+                <figcaption>#Github</figcaption>
               </figure>
             </li>
           
@@ -173,14 +188,19 @@
                 <img src="resources/images/aws-logo.png" alt="futurist AWS logo">
                 <figcaption>#AWS</figcaption>
               </figure>
-              <figure id="github">
-                <img src="resources/images/github-logo.png" alt="futurist Github logo">
-                <figcaption>#Github</figcaption>
+              <figure>
+                <img src="resources/images/node-logo.png" alt="futurist node logo">
+                <figcaption>#Node.js</figcaption>
               </figure>
               <figure id="git">
                 <img src="resources/images/git-logo.png" alt="futurist Git logo">
                 <figcaption>#Git</figcaption>
               </figure>
+              <figure>
+                <img src="resources/images/express-logo.png" alt="futurist express logo">
+                <figcaption>#Express,js</figcaption>
+              </figure>
+              
             
             </li>
           
@@ -195,6 +215,13 @@
                 <img src="resources/images/gpt-logo.png" alt="futurist gpt logo">
                 <figcaption>#GPT</figcaption>
               </figure>
+              <figure id="azure">
+                <img src="resources/images/azure-logo.png" alt="futurist MS Azure logo">
+                <figcaption>#MS Azure</figcaption>
+              </figure>
+              <figure id="aws">
+                <img src="resources/images/aws-logo.png" alt="futurist AWS logo">
+                <figcaption>#AWS</figcaption>
             </li>
           </ul>
     
@@ -204,14 +231,14 @@
       <h2 id="experience-title">Work & Projects</h2>
       <section id="experience">
         
-        <div class="sub-section" id="netrica">
+        <div id="netrica">
           <figure>
             <img src="resources/images/netrica.png" alt="netrica web home page">
             <figcaption>Netrica's prototype web app for business networking and services.</figcaption>
           </figure>
         </div>
 
-        <div class="sub-section" id="gundam">
+        <div id="gundam">
           <figure>
             <img src="resources/images/gundam.png" alt="gundam builder home page">
             <figcaption>A web game where we can create custom gundams and mobile suit teams for battle.</figcaption>
@@ -227,23 +254,27 @@
 
         <form>
         <div id = "messaging" role="message box">
-          <label for="message-me">Leave a message:</label><br/>
-          <textarea id="message-me" placeholder="..."></textarea>
+          <label for="message-me">Contacts:</label><br/>
+          <textarea id="message-me" placeholder="Your message :)
+          "></textarea>
         </div>
         </form>
         
         <ul>
-          <li><a href="linkedin" role="linkedin contact"><img src="resources/images/linkedin-logo.png" alt="linkedin icon"></a></li>
-          <li><a href="email" role="e-mail address"><img src="resources/images/at-logo.png" alt="@-icon"></a></li>
-          <li><a href="github" role="github contact"><img src="resources/images/github-logo.png" alt="github-icon"></a></li>
+          <li><a href="mailto:tantely.m.ra@gmail.com" role="e-mail address"><img src="resources/images/at-logo.png" alt="@-icon"></a></li>
+          <li><a href="https://www.linkedin.com/in/tantely-matthieu/" role="linkedin contact"><img src="resources/images/linkedin-logo.png" alt="linkedin icon"></a></li>
+          <li><a href="https://github.com/TantelyMR" role="github contact"><img src="resources/images/github-logo.png" alt="github-icon"></a></li>
         </ul>
+        
       </div>
-      <p>Shoot me a message if you have a project idea or just have a a little chat!</br></p>
+      <p id="last-message"><span>S</span><span>h</span><span>o</span><span>o</span><span>t</span><span> </span><span>m</span><span>e</span><span> </span><span>a</span><span> </span><span>m</span><span>e</span><span>s</span><span>s</span><span>a</span><span>g</span><span>e</span><span> </span><span>i</span><span>f</span><span> </span><span>y</span><span>o</span><span>u</span><span> </span><span>h</span><span>a</span><span>v</span><span>e</span><span> </span><span>s</span><span>o</span><span>m</span><span>e</span><span> </span><span>p</span><span>r</span><span>o</span><span>j</span><span>e</span><span>c</span><span>t</span><span> </span><span>i</span><span>d</span><span>e</span><span>a</span><span>s</span><span>,</span><span> </span><span>w</span><span>a</span><span>n</span><span>t</span><span> </span><span>t</span><span>o</span><span> </span><span>c</span><span>o</span><span>l</span><span>l</span><span>a</span><span>b</span><span>,</span><span> </span><span>o</span><span>r</span><span> </span><span>j</span><span>u</span><span>s</span><span>t</span><span> </span><span>h</span><span>a</span><span>v</span><span>e</span><span> </span><span>a</span><span> </span><span>l</span><span>i</span><span>t</span><span>t</span><span>l</span><span>e</span><span> </span><span>c</span><span>h</span><span>a</span><span>t</span><span>!</span></br></p>
 
       <div id="show" aria-label="extra interactive show and animation">
       <img src="resources/images/mohammad-alizade-bg.webp" alt="something cool"></div>
 
     </footer>
-    <p id="copyright">&copy; Tantely Matthieu 2023</p>
+    <p id="copyright"><span>&copy; Tantely Matthieu 2023</span></p>
   </body>
 </html>
+
+

@@ -1,21 +1,64 @@
 /* eslint-disable max-lines-per-function */
+
+window.addEventListener('load', function() {
+  document.body.classList.add('loaded');
+});
+
 const topNav = document.querySelector('#top-nav');
-const sideBar = document.querySelector('#side-bar');
+const skillTechNav = document.querySelector('#skill-nav');
+const projectsNav = document.querySelector('#exp-nav');
+const sideBar = document.querySelectorAll('#side-bar h4');
 const header = document.querySelector('header');
 //const technology = document.querySelector('#technology');
+const subSection = document.querySelectorAll('main div');
+const skillAndTech = document.querySelectorAll('h2');
+const headerWelcome = document.querySelector('header h1');
+
+const skillTitle = document.getElementById('skill-tech-title');
 
 function navBackgroundColor() {
   topNav.classList.toggle('bordered', window.scrollY > header.offsetHeight);
 }
 
+window.addEventListener('scroll', navBackgroundColor);
+
 function sideColorChange() {
-  sideBar.style.color = (window.scrollY < header.offsetHeight / 2) && (window.innerWidth > 680) ? 'black' : 'white';
+  for (let h4 in sideBar) {
+    sideBar[h4].style.color = (window.scrollY < header.offsetHeight / 1.5) && (window.innerWidth > 680) ? 'black' : 'white';
+  }
+}
+
+window.addEventListener('scroll', sideColorChange);
+
+function sectionToggle() {
+  for (let div of subSection) {
+    div.classList.toggle('sub-section');
+  }
+}
+
+function sectionScrollToggle() {
+  // eslint-disable-next-line max-len
+  if (window.scrollY < skillTitle.offsetHeight / 2) for (let div of subSection) {
+    div.classList.toggle('sub-section');
+  }
+}
+
+window.addEventListener('scroll',sectionScrollToggle);
+
+skillTechNav.addEventListener('click',sectionToggle);
+projectsNav.addEventListener('click',sectionToggle);
+
+
+for (let h2 of skillAndTech) {
+  h2.addEventListener('click', sectionToggle);
 }
 
 function showFigcaption(event) {
   const figcaption = event.currentTarget.querySelector('figcaption');
   if (figcaption) {
     figcaption.style.opacity = '100%';
+    figcaption.style.transition = '2s ease';
+    figcaption.style.animation = 'underline-me 2s';
   }
 }
 
@@ -26,8 +69,15 @@ function hideFigcaption(event) {
   }
 }
 
-window.addEventListener('scroll', sideColorChange);
-window.addEventListener('scroll', navBackgroundColor);
+function changeWelcome() {
+  this.innerHTML = (this.innerHTML === 'Welcome!') ? 'Bienvenue!' : 'Welcome!';
+  this.style.animation = "navigation-transit 2s";
+  this.style.transition = "4s ease";
+}
+
+headerWelcome.addEventListener('mouseover', changeWelcome);
+headerWelcome.addEventListener('click', changeWelcome);
+
 
 // Wait for the DOM content to be fully loaded before running the script
 document.addEventListener('DOMContentLoaded', function () {
@@ -48,10 +98,35 @@ document.addEventListener('DOMContentLoaded', function () {
 }
 );
 
-const headerWelcome = document.querySelector('header h1');
+const spanLetters = document.querySelectorAll('p span');
+const fonts = [
+  'Josefin Slab',
+  'League Script',
+  'Poiret One',
+  'Raleway',
+  'Raleway Dots',
+  'Rouge Script',
+  'Rubik Moonrocks',
+  'Sacramento',
+  'Tourney',
+];
 
-function changeWelcome() {
-  this.innerHTML = (this.innerHTML === 'Welcome!') ? 'Bienvenue!' : 'Welcome!';
+function changeLetterFont(event) {
+  const getRandomFontIndex = () => Math.floor(Math.random() * 9);
+  const randomFont = fonts[getRandomFontIndex()];
+  event.currentTarget.style.fontFamily = randomFont;
 }
 
-headerWelcome.addEventListener('mouseover', changeWelcome);
+for (let letter of spanLetters) {
+  letter.addEventListener('mouseover', changeLetterFont);
+}
+
+const message = document.querySelectorAll('p');
+
+message.forEach((paragraph) => {
+  paragraph.addEventListener('click', () => {
+    for (let letter of spanLetters) {
+      letter.style.fontFamily = 'Raleway';
+    }
+  });
+});
