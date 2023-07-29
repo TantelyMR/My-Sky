@@ -802,7 +802,7 @@ footer ul li img {
   width: 47%;
   overflow: hidden;
   margin: 0;
-  animation: stars 60s;
+  animation: stars 30s;
   animation-direction: alternate;
   animation-fill-mode: forwards;
   animation-iteration-count: infinite;
@@ -846,7 +846,7 @@ footer ul li img {
   padding: 3px 10px 0 10px;
   border: double 2px rgba(0, 255, 255, 0.539);
   border-radius: 10px;
-  transition: 1s ease;
+  transition: 2s ease;
   box-shadow: 2px 2px;
   background: rgba(95, 197, 163, 0.54);
   color: black;

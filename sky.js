@@ -118,7 +118,7 @@ function changeLetterFont(event) {
 
 for (let letter of spanLetters) {
   letter.addEventListener('mouseover', changeLetterFont);
-  letter.addEventListener('touchmove', changeLetterFont);
+  letter.addEventListener('touchstart', changeLetterFont);
 }
 
 const message = document.querySelectorAll('p');
