@@ -10,6 +10,7 @@ const projectsNav = document.querySelector('#exp-nav');
 const sideBar = document.querySelector('#side-bar');
 const header = document.querySelector('header');
 const technology = document.querySelector('#technology');
+const experience = document.querySelector('#experience');
 const subSection = document.querySelectorAll('main div');
 const skillAndTech = document.querySelectorAll('h2');
 const headerWelcome = document.querySelector('header h1');
@@ -46,6 +47,7 @@ window.addEventListener('scroll',sectionScrollToggle);
 skillTechNav.addEventListener('click',sectionToggle);
 projectsNav.addEventListener('click',sectionToggle);
 technology.addEventListener('click',sectionToggle);
+experience.addEventListener('click',sectionToggle);
 
 for (let h2 of skillAndTech) {
   h2.addEventListener('click', sectionToggle);
@@ -116,7 +118,7 @@ function changeLetterFont(event) {
 
 for (let letter of spanLetters) {
   letter.addEventListener('mouseover', changeLetterFont);
-  letter.addEventListener('touchStart', changeLetterFont);
+  letter.addEventListener('touchmove', changeLetterFont);
 }
 
 const message = document.querySelectorAll('p');

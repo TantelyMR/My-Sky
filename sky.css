@@ -627,7 +627,7 @@ main {
 .sub-section {
   opacity: 1;
   position: relative;
-  animation: navigation-transit 3s;
+  animation: navigation-transit 2s;
   animation-fill-mode: forwards;
   animation-direction: alternate;
   animation-iteration-count: 1;
@@ -1061,7 +1061,7 @@ header p span:hover {
 
   #education h4 {
     position: relative;
-    left: 55%
+    left: 30%
   }
 
   #me .sub-side {
@@ -1079,11 +1079,14 @@ header p span:hover {
   #education .sub-side {
     position: fixed;
     top: 75%;
+    right: 0;
+    min-width: 80%;
   }
 
   #me p {
-    max-width: 100%;
+    max-width: 95%;
   }
+  
 
   footer {
     flex-flow: column;
