@@ -859,6 +859,23 @@ footer ul li img {
   margin: 5px 0 0 15px;
 }
 
+form input {
+  font-family: 'Raleway Dots', cursive;
+  font-size: 1.2rem;
+  background-color: rgba(72, 161, 131, 0.402);
+  color: black;
+  border-radius: 25px;
+  font-weight: bold;
+  max-width: 80%;
+}
+
+form input:active {
+  background-color:rgb(244, 245, 238);
+}
+#contacts ul {
+  margin: 10px 25px 0 0;
+}
+
 #contacts li {
   padding-right: 10px;
   margin: 0;

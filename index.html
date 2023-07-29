@@ -30,7 +30,7 @@
         <li><a href="#experience-title" id="exp-nav">Projects</a></li>
       </ul>
       <div class="widget" id="side-button">
-        <div id="music" role="music widget"><img src="resources/images/play-button.png" alt="play music"></div>
+        <div id="music"><img src="resources/images/play-button.png" alt="play music icon"></div>
         <audio id="audioPlayer" controls>
           <source src="resources/audio/return-of-kings.mp3" type="audio/mpeg">
       </audio>
@@ -48,7 +48,7 @@
       <a href="https://unsplash.com/@impatrickt" id="p-credit">Picture by Patrick Tomaso</a>
 
     </header>
-    <div id="side-bar" role="background contacts & resume">
+    <div id="side-bar" aria-label="background contacts & resume">
         <div id="me">
           <h4>About Me</h4><div class="sub-side">
           <p><span id="hi">Greetings!</span><br/><br/>I'm a software wizard (aka engineer), weaving digital experiences with an emphasis on <span>interactivity</span> and <span>accessibility</span>. Fun and functionality go hand-in-hand in my universe as I think all applications should have <span>powerful features</span> while still remaining fun and accessible.<br/><br/>From my days as a logistics and economics expert, I bring the art of <span>organization</span>, <span>efficiency</span> and <span>data-driven</span> decision-making to my coding adventures.<br/><br/>Programming found me when my former company needed more automation and digitization, and the passion hasn't waned ever since.<br/><br/>
@@ -57,9 +57,9 @@
         <div id="my-contact">
           <h4>Contact</h4><div class="sub-side">
           <ul>
-            <li><a href="mailto:tantely.m.ra@gmail.com" role="e-mail address"><img src="resources/images/at-logo.png" alt="@-icon"></a></li>
-            <li><a href="https://www.linkedin.com/in/tantely-matthieu/" role="linkedin contact"><img src="resources/images/linkedin-logo.png" alt="linkedin icon"></a></li>
-            <li><a href="https://github.com/TantelyMR" role="github contact"><img src="resources/images/github-logo.png" alt="github-icon"></a>
+            <li><a href="mailto:tantely.m.ra@gmail.com" aria-label="e-mail address"><img src="resources/images/at-logo.png" alt="@-icon"></a></li>
+            <li><a href="https://www.linkedin.com/in/tantely-matthieu/" aria-label="linkedin contact"><img src="resources/images/linkedin-logo.png" alt="linkedin icon"></a></li>
+            <li><a href="https://github.com/TantelyMR" aria-label="github contact"><img src="resources/images/github-logo.png" alt="github-icon"></a>
             </li>
           </ul></div>
         </div>
@@ -72,7 +72,7 @@
       <h2 id="skill-tech-title">Skills & Tech</h2>
       <section id="skill-tech">
         <h3>Technology</h3>
-        <div id="technology" tabindex="0">
+        <div id="technology">
           
           <figure>
             <img src="resources/images/mongo-logo.png" alt="futurist mongodb logo">
@@ -265,17 +265,18 @@
       <div id="contacts">
 
         <form action="hub/formal.html" method="POST">
-        <div id = "messaging" role="message box">
+        <div id = "messaging" aria-label="message box">
           <label for="message-me">Contacts:</label><br/>
           <textarea id="message-me" placeholder="Your message :)
           "></textarea>
+          <input type="submit" value="Send">
         </div>
         </form>
         
         <ul>
-          <li><a href="mailto:tantely.m.ra@gmail.com" role="e-mail address"><img src="resources/images/at-logo.png" alt="@-icon"></a></li>
-          <li><a href="https://www.linkedin.com/in/tantely-matthieu/" role="linkedin contact"><img src="resources/images/linkedin-logo.png" alt="linkedin icon"></a></li>
-          <li><a href="https://github.com/TantelyMR" role="github contact"><img src="resources/images/github-logo.png" alt="github-icon"></a></li>
+          <li><a href="mailto:tantely.m.ra@gmail.com" aria-label="e-mail address"><img src="resources/images/at-logo.png" alt="@-icon"></a></li>
+          <li><a href="https://www.linkedin.com/in/tantely-matthieu/" aria-label="linkedin contact"><img src="resources/images/linkedin-logo.png" alt="linkedin icon"></a></li>
+          <li><a href="https://github.com/TantelyMR" aria-label="github contact"><img src="resources/images/github-logo.png" alt="github-icon"></a></li>
         </ul>
         
       </div>
