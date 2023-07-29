@@ -1,5 +1,5 @@
+/* eslint-disable max-len */
 /* eslint-disable max-lines-per-function */
-
 window.addEventListener('load', function() {
   document.body.classList.add('loaded');
 });
@@ -7,9 +7,9 @@ window.addEventListener('load', function() {
 const topNav = document.querySelector('#top-nav');
 const skillTechNav = document.querySelector('#skill-nav');
 const projectsNav = document.querySelector('#exp-nav');
-const sideBar = document.querySelectorAll('#side-bar h4');
+const sideBar = document.querySelector('#side-bar');
 const header = document.querySelector('header');
-//const technology = document.querySelector('#technology');
+const technology = document.querySelector('#technology');
 const subSection = document.querySelectorAll('main div');
 const skillAndTech = document.querySelectorAll('h2');
 const headerWelcome = document.querySelector('header h1');
@@ -22,13 +22,11 @@ function navBackgroundColor() {
 
 window.addEventListener('scroll', navBackgroundColor);
 
-function sideColorChange() {
-  for (let h4 in sideBar) {
-    sideBar[h4].style.color = (window.scrollY < header.offsetHeight / 1.5) && (window.innerWidth > 680) ? 'black' : 'white';
-  }
+function sideBarReveal() {
+  sideBar.classList.toggle('top', (window.scrollY < header.offsetHeight / 1.5) && (window.innerWidth > 680));
 }
 
-window.addEventListener('scroll', sideColorChange);
+window.addEventListener('scroll', sideBarReveal);
 
 function sectionToggle() {
   for (let div of subSection) {
@@ -47,7 +45,7 @@ window.addEventListener('scroll',sectionScrollToggle);
 
 skillTechNav.addEventListener('click',sectionToggle);
 projectsNav.addEventListener('click',sectionToggle);
-
+technology.addEventListener('click',sectionToggle);
 
 for (let h2 of skillAndTech) {
   h2.addEventListener('click', sectionToggle);
@@ -56,9 +54,8 @@ for (let h2 of skillAndTech) {
 function showFigcaption(event) {
   const figcaption = event.currentTarget.querySelector('figcaption');
   if (figcaption) {
-    figcaption.style.opacity = '100%';
+    figcaption.style.opacity = '1';
     figcaption.style.transition = '2s ease';
-    figcaption.style.animation = 'underline-me 2s';
   }
 }
 
@@ -119,6 +116,7 @@ function changeLetterFont(event) {
 
 for (let letter of spanLetters) {
   letter.addEventListener('mouseover', changeLetterFont);
+  letter.addEventListener('touchStart', changeLetterFont);
 }
 
 const message = document.querySelectorAll('p');
@@ -130,3 +128,49 @@ message.forEach((paragraph) => {
     }
   });
 });
+
+const lastMessage = document.querySelector('#last-message');
+
+function revealElement(event) {
+  event.currentTarget.style.opacity = "100%";
+}
+
+lastMessage.onmouseover = revealElement;
+lastMessage.ontouchstart = revealElement;
+
+const sideTitles = document.querySelectorAll('#side-bar h4');
+
+function hideDetails(details) {
+  details.style.display = "none";
+}
+
+function displayElement() {
+  let details = this.nextElementSibling;
+  if (details.style.display !== "flex") {
+    details.style.display = "flex";
+
+    if (window.innerWidth > 681) {
+      details.style.animation = "navigation-transit 2s";
+    }
+  } else {
+    details.style.display = "none";
+  }
+  setTimeout(hideDetails, 20000, details);
+}
+sideTitles.forEach((title) => {
+  title.addEventListener('click', displayElement);
+});
+
+const music = document.querySelector("#music");
+const audioPlayer = document.querySelector("#audioPlayer");
+
+function playAudio() {
+  if (audioPlayer.paused) {
+    audioPlayer.play();
+  } else {
+    audioPlayer.pause();
+  }
+}
+
+music.addEventListener('click', playAudio);
+music.addEventListener('click', displayElement);
