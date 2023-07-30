@@ -118,7 +118,7 @@ function changeLetterFont(event) {
 
 for (let letter of spanLetters) {
   letter.addEventListener('mouseover', changeLetterFont);
-  letter.addEventListener('touchstart', changeLetterFont);
+  letter.addEventListener('touchmove', changeLetterFont);
 }
 
 const message = document.querySelectorAll('p');
@@ -138,7 +138,7 @@ function revealElement(event) {
 }
 
 lastMessage.onmouseover = revealElement;
-lastMessage.ontouchstart = revealElement;
+lastMessage.ontouchmove = revealElement;
 
 const sideTitles = document.querySelectorAll('#side-bar h4');
 
