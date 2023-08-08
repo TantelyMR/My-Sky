@@ -1,0 +1,8 @@
+#ignores testing file
+test*
+
+#ignores linting file
+.eslintrc.yml
+
+#ignores package
+node*

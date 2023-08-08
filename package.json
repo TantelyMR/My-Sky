@@ -1,0 +1,14 @@
+{
+  "name": "skies",
+  "version": "1.0.0",
+  "description": "Initial packs",
+  "main": "sky.js",
+  "scripts": {
+    "test": "test"
+  },
+  "author": "Sky",
+  "license": "ISC",
+  "devDependencies": {
+    "mocha": "^10.2.0"
+  }
+}

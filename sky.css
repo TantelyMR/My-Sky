@@ -871,7 +871,7 @@ form input {
   font-family: 'Raleway Dots', cursive;
   font-size: 1.2rem;
   background-color: rgba(72, 161, 131, 0.402);
-  color: black;
+  color: azure;
   border-radius: 25px;
   font-weight: bold;
   margin: 5px;
@@ -879,7 +879,10 @@ form input {
 }
 
 form input:active {
-  background-color:rgb(244, 245, 238);
+  background-color:rgb(212, 235, 82);
+  color: black;
+  box-shadow: 5px 5px aliceblue;
+  transition: 200ms ease;
 }
 #contacts ul {
   margin: 10px 25px 0 0;
@@ -938,7 +941,7 @@ header p span:hover {
 
 #last-message span {
   color:rgba(113, 219, 216, 0.647);
-  animation: navigation-transit 3s;
+  animation: navigation-transit 2s;
   animation-fill-mode: forwards;
   animation-direction: alternate;
   animation-iteration-count: 1;
