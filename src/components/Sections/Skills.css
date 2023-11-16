@@ -1,0 +1,63 @@
+/*----Skills----*/
+
+#skills-tech {
+  display: flex;
+  flex-flow: nowrap column;
+  justify-content: space-between;
+  align-items: flex-start;
+  text-align: left;
+  overflow: auto;
+}
+
+#skills-tech li {
+  display: block;
+  flex-flow: wrap;
+  margin: 0;
+  padding: 0;
+}
+
+.skill-figure {
+  display: flex;
+}
+
+#skills-tech p {
+  color: azure;
+  position: relative;
+  left: 0;
+  top: 0;
+  border: none;
+  background: none;
+  margin-top: 10px;
+  margin-right: 70px;
+  padding: 0;
+}
+
+#skills-tech figure {
+  margin: 0px 5px 20px 10px;
+  padding: 0;
+  cursor: crosshair;
+}
+
+#skills-tech img {
+  width: 43px;
+  margin: 0;
+  padding: 0;
+  filter: grayscale(100);
+}
+
+#skill h4 {
+  margin: 0;
+}
+
+#skills-tech figcaption {
+  display: block;
+  position: absolute;
+  padding: 0;
+  margin: 0px;
+  opacity: 0;
+}
+
+#skills-tech figcaption:hover {
+  opacity: 100%;
+  transition: 5s ease-out;
+}

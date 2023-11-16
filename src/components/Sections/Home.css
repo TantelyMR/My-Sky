@@ -1,0 +1,75 @@
+/*----Home----*/
+
+main #home {
+  background: black url(../../assets/images/patrick-tomasso.avif) no-repeat center/ cover;
+  overflow: auto;
+}
+
+#home {
+  display: flex;
+  flex-flow: wrap column;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+#home h2 {
+  padding: 0 10px 0 10px;
+}
+
+#small-message {
+  padding: 15px;
+}
+
+#home h2, #small-message {
+  position: relative;
+  left: 100px;
+  bottom: 50px;
+  color: rgb(0, 0, 0);
+  background-color: hsla(33, 54%, 53%, 0.75);
+  border: double 5px rgba(240, 255, 255, 0.869);
+  border-top-left-radius: 255px 15px;
+  border-top-right-radius: 15px 225px;
+  border-bottom-right-radius: 225px 15px;
+  border-bottom-left-radius:15px 255px;
+  max-width: 100%;
+  text-align: left;
+}
+
+#background-credit {
+  position: relative;
+  top: 4%;
+  left: 120px;
+  bottom: 50px;
+  padding: 4px;
+  background-color: azure;
+  border: double black 4px;
+  border-top-left-radius: 255px 15px;
+  border-top-right-radius: 15px 225px;
+  border-bottom-right-radius: 225px 15px;
+  border-bottom-left-radius:15px 255px;
+  opacity: 60%;
+  cursor: crosshair;
+}
+
+/*---Resizers---*/
+
+@media only screen and (max-width: 1080px) {
+  #home h2, #home p {
+    position: relative;
+    left: 0px;
+    bottom: 30px;
+    margin: 10px;
+  }
+}
+
+@media only screen and (min-width: 1920px) {
+  #home {
+    display: flex;
+    flex-flow: wrap column;
+    align-items: center;
+  }
+
+  #home h2, #home p {
+    text-align: left;
+  }
+}

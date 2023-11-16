@@ -1,0 +1,37 @@
+/*----About----*/
+
+#about {
+  display: flex;
+  flex-flow: nowrap column;
+  justify-content: center;
+  align-items: flex-start;
+  text-align: left;
+  color: azure;
+  overflow: auto;
+}
+
+#about h4 {
+  position: relative;
+  left: 20px;
+  margin: 20px 0px 10px 20px;
+  padding: 0;
+}
+
+#about h3 {
+  margin: 0;
+  padding: 0;
+}
+
+#about p {
+  margin-top: 10px;
+  margin-right: 80px;
+}
+
+#about div {
+  display: flex;
+  flex-flow: wrap column;
+  justify-content: center;
+  border: double;
+  margin: 0px 0px 0 20px;
+  padding: 0;
+}
