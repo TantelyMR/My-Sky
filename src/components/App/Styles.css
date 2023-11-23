@@ -196,3 +196,48 @@ figure, #contacts {
   animation: spin-color 20s infinite ease-in-out;
 }
 
+@media only screen and (max-width: 1440px) {
+  #home {
+    display: flex;
+    flex-flow: wrap column;
+  }
+
+  #small-message {
+    font-size: 1rem;
+  }
+
+  #skills-tech p, #about p {
+    font-size: 0.9rem;
+  }
+
+  #home h2, #small-message {
+    position: relative;
+    top: -10%;
+  }
+
+  #background-credit {
+    position: relative;
+    top: -5%;
+    bottom: 0;
+    margin: 0;
+    font-size: 0.8rem;
+  }
+}
+
+@media only screen and (max-width: 430px) {
+  #name {
+    font-size: 1.6rem;
+  }
+ 
+  #topnav a {
+    font-size: 1.4rem;
+  }
+
+  #skills-tech figure {
+    position: relative;
+    left: -5%;
+  }
+  #skills-tech img{
+    width: 35px;
+  }
+}

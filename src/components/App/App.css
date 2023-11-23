@@ -2,11 +2,9 @@
   box-sizing: border-box;
 }
 
-html {
-  border: double 4px rgb(16, 175, 175);
-}
-
 body {
+  border-left: double 4px rgb(16, 175, 175);
+  border-right: double 4px rgb(16, 175, 175);
   display: flex;
   flex-flow: column;
   justify-content: center;

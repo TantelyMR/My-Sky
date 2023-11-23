@@ -7,7 +7,7 @@ main #home {
 
 #home {
   display: flex;
-  flex-flow: wrap column;
+  flex-flow: nowrap column;
   justify-content: center;
   align-items: flex-start;
 }
