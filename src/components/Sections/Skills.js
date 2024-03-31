@@ -14,7 +14,7 @@ import nodeLogo from '../../assets/images/node-logo.png';
 import expressLogo from '../../assets/images/express-logo.png';
 import gitLogo from '../../assets/images/git-logo.png';
 
-import './Skills.css';
+//import './Skills.css';
 
 function showFigCaption(event) {
   const figcaption = event.currentTarget.querySelector('figcaption');

@@ -10,6 +10,7 @@ main #home {
   flex-flow: nowrap column;
   justify-content: center;
   align-items: flex-start;
+  overflow: scroll;
 }
 
 #home h2 {

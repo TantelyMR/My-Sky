@@ -3,7 +3,9 @@ import githubLogo from '../../assets/images/github-logo.png';
 import linkedInLogo from '../../assets/images/linkedin-logo.png';
 import emailLogo from '../../assets/images/email-logo.png';
 import { Link, NavLink } from 'react-router-dom';
-import './Footer.css';
+
+//import './Footer.css';
+
   function Footer() {
     return (
     <div id = "footer">

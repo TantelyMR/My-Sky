@@ -2,6 +2,14 @@
   box-sizing: border-box;
 }
 
+#page {
+  display: flex;
+  flex-flow: column;
+  justify-content: space-between;
+  border: double 7px;
+  height: 100vh;
+}
+
 body {
   border-left: double 4px rgb(16, 175, 175);
   border-right: double 4px rgb(16, 175, 175);

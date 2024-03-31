@@ -8,8 +8,8 @@ import About from '../Sections/About';
 import Projects from '../Sections/Projects';
 import Skills from '../Sections/Skills';
 
-import './App.css';
-import './Styles.css';
+//import './App.css';
+//import './Styles.css';
 
 const router = createBrowserRouter(createRoutesFromElements(
   <Route path = '/' element= { <Root/> } >
