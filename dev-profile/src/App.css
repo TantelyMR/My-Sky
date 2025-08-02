@@ -1,0 +1,287 @@
+* {
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
+}
+
+html {
+  font-size: 16px;
+  min-height: 100.01vh;
+}
+
+
+html,
+body {
+  overscroll-behavior: none;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+
+}
+
+body {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+html::-webkit-scrollbar,
+body::-webkit-scrollbar {
+  display: none;
+  /* Chrome, Safari, Opera */
+}
+
+.splash-screen {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  background-image: url('./assets/images/rainbow.jpg');
+  background-size: fill;
+  background-position: center;
+  background-repeat: no-repeat;
+  justify-content: center;
+  align-items: center;
+  z-index: 333;
+  animation: fadeOut 1.2s ease-out 0.7s forwards;
+}
+
+.splash-screen span {
+  font-family: 'Courier New', Courier, monospace;
+}
+
+.splash-top {
+  animation: fade-in-render 300ms;
+  position: absolute;
+  top: 3%;
+  font-family: 'Delius';
+  font-size: medium;
+  color: azure;
+}
+
+.splash-screen svg {
+  position: absolute;
+  top: 35%;
+  fill: azure;
+  stroke: azure;
+  width: 90px !important;
+  height: 90px !important;
+  animation: zoomIn 700ms ease-in;
+}
+
+#banner-note-container {
+  position: fixed;
+  top: 30px;
+  right: 100px;
+  display: flex;
+  flex-flow: column;
+  align-items: flex-end;
+  z-index: 99;
+}
+
+.banner-note {
+  animation: fade-in-render 1s ease;
+  text-wrap: wrap;
+  border-radius: 15px;
+  margin: 0 0 5px 0;
+  padding: 0 7px;
+  width: auto !important;
+  max-width: 100%;
+  max-height: 55px;
+  overflow-y: auto;
+  scrollbar-width: none;
+  z-index: 99;
+}
+
+.banner-note {
+  background-color: black;
+  color: azure;
+  border: 1px solid mediumaquamarine;
+}
+
+.banner-note.alert {
+  border: 1px solid salmon;
+}
+
+@keyframes fade-in-render {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+
+@keyframes fade-off-render {
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes zoomIn {
+  0% {
+    transform: scale(0.8);
+    opacity: 0;
+    fill: black;
+  }
+
+  33% {
+    fill: burlywood;
+  }
+
+  66% {
+    fill: aquamarine;
+  }
+
+  100% {
+    transform: scale(1);
+    opacity: 1;
+    fill: azure;
+  }
+}
+
+@keyframes fadeOut {
+  to {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
+@keyframes pop-on {
+  from {
+    opacity: 0;
+    transform: scale(1.2);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes slide-in-pop {
+  from {
+    transform: scale(0);
+    /* Combine both translateX and scale */
+    opacity: 0;
+  }
+
+  to {
+    transform: scale(1);
+    /* Combine both translateX and scale */
+    opacity: 1;
+  }
+}
+
+@keyframes slide-in-off {
+  from {
+    transform: scale(1);
+    /* Combine both translateX and scale */
+    opacity: 1;
+  }
+
+  to {
+    transform: scale(0);
+    /* Combine both translateX and scale */
+    opacity: 0;
+  }
+}
+
+@keyframes slide-left-right-in {
+  from {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slide-left-right-off {
+  from {
+    transform: translateX(0);
+    opacity: 1;
+  }
+
+  to {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+}
+
+@keyframes slide-right-left-off {
+  from {
+    transform: translateX(0%);
+    opacity: 1;
+  }
+
+  to {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+}
+
+@keyframes slide-right-left-in {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateX(0%);
+    opacity: 1;
+  }
+}
+
+@keyframes slide-up-down {
+  from {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateY((0));
+    opacity: 1;
+  }
+}
+
+@keyframes slide-down-up {
+  from {
+    transform: translateY(+100%);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateY((0));
+    opacity: 1;
+  }
+}
+
+@keyframes infinity-spin {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(1440deg);
+  }
+}
+
+@keyframes light-spin {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}

@@ -1,0 +1,212 @@
+#home {
+  position: relative;
+  height: 100vh;
+  overflow-y: scroll;
+  -webkit-overflow-scrolling: touch;
+  margin: 10px 3px 0 !important;
+  padding: 0;
+  overflow-x: hidden;
+  scroll-snap-align: start;
+  scroll-snap-type: y mandatory;
+  scroll-behavior: smooth;
+  scrollbar-width: none;
+  /* Firefox */
+  -ms-overflow-style: none;
+  /* IE and Edge */
+  display: flex;
+  flex-flow: column;
+  z-index: 3;
+}
+
+#home::-webkit-scrollbar {
+  display: none;
+  /* Chrome, Safari */
+}
+
+#custom-scrollbar {
+  position: fixed;
+  top: 0;
+  right: 3px;
+  width: 5px;
+  height: 70%;
+  background: transparent;
+  cursor: pointer;
+  z-index: 1000;
+}
+
+#custom-thumb {
+  width: 100%;
+  background: mediumaquamarine;
+  border-radius: 3px;
+  height: 50px;
+  cursor: grab;
+  transition: background 0.3s;
+}
+
+#custom-thumb:hover {
+  background: lightpink;
+}
+
+.section {
+  scroll-snap-align: center;
+  min-height: 100vh;
+  padding: 21px 0;
+  left: 50%;
+  transform: translateX(-50%);
+  max-width: 1311px;
+}
+
+#contact {
+  position: fixed;
+  bottom: 12px;
+  left: 41%;
+  transform: translate(-50%, 0);
+  display: flex;
+  justify-content: space-around;
+  gap: 21px;
+  list-style: none;
+  z-index: 5;
+}
+
+#contact li {
+  animation: slide-down-up 500ms ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 500ms ease;
+  margin: 0;
+  padding: 0;
+  cursor: pointer;
+}
+
+#contact li:hover {
+  transition: 500ms ease;
+  border: 1px solid skyblue;
+  border-radius: 50%;
+  padding: 7px 7px 0px;
+  transform: scale(110%) rotate(21deg);
+}
+
+#contact li:active {
+  transition: 500ms ease;
+  border: 1px solid aquamarine;
+  border-radius: 50%;
+  background-color: azure;
+  padding: 7px;
+  transform: scale(90%) rotate(21deg);
+}
+
+#contact svg {
+  width: 25px;
+  height: 25px;
+}
+
+.email-options {
+  animation: slide-up-down 500ms ease;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  margin-right: 25px;
+  z-index: 10;
+}
+
+.email-options button {
+  font-size: 0.7rem;
+  color: azure;
+  background-color: transparent;
+  border: 3px double azure;
+  border-radius: 12px;
+  padding: 3px 10px;
+  transition: 300ms ease;
+}
+
+.email-options button:hover {
+  transition: 300ms ease;
+  font-size: 0.7rem;
+  color: black;
+  background-color: azure;
+  border: 1px solid black;
+  border-radius: 12px;
+  padding: 3px 10px;
+}
+
+#navigator {
+  list-style: none;
+  display: flex;
+  flex-flow: column;
+  align-items: flex-end;
+  gap: 5px;
+  justify-content: space-around;
+  position: fixed;
+  bottom: 33px;
+  right: 30px;
+  width: 120px !important;
+  padding: 10px;
+  margin: 0;
+  background-color: transparent;
+  border: 3px solid burlywood;
+  border-top: none;
+  border-left: none;
+  border-radius: 5px;
+  z-index: 333;
+}
+
+#navigator li {
+  animation: slide-right-left-in 5000ms ease;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  font-size: 0.9rem;
+  color: azure;
+  cursor: pointer;
+  width: 100%;
+  cursor: pointer;
+  z-index: 3;
+  transition: 500ms ease;
+}
+
+#navigator li:hover {
+  transition: 500ms ease;
+  list-style: circle;
+  background-color: mediumaquamarine;
+  padding: 7px 5px 3px;
+  color: black;
+  transform: scale(110%);
+  border: 1px solid azure;
+  border-radius: 15px;
+  font-size: 0.85rem;
+}
+
+#navigator li.active {
+  transition: 500ms ease;
+  list-style: circle;
+  width: fit-content;
+  background-color: mediumaquamarine;
+  padding: 7px 5px 3px;
+  color: black;
+  transform: scale(110%);
+  border: 1px solid azure;
+  border-radius: 15px;
+  font-size: 0.85rem;
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: bolder;
+}
+
+#navigator li:active {
+  list-style: circle;
+  transition: 500ms ease;
+  background-color: azure;
+  padding: 7px 5px 3px;
+  color: black;
+  transform: scale(90%);
+  border: 1px solid azure;
+  border-radius: 15px;
+}
+
+#navigator svg {
+  width: 25px;
+  height: 25px;
+  margin-right: 5px;
+  fill: azure;
+}

@@ -1,0 +1,33 @@
+{
+  "short_name": "TantelyDev",
+  "name": "Tantely Rabemananjara — Developer Page",
+  "icons": [
+    {
+      "src": "33S.ico",
+      "sizes": "64x64 32x32 24x24 16x16",
+      "type": "image/x-icon"
+    },
+    {
+      "src": "33S2.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "33S2.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
+  ],
+  "start_url": "/",
+  "display": "standalone",
+  "orientation": "portrait",
+  "theme_color": "white",
+  "background_color": "black",
+  "description": ">.<!",
+  "id": "33-Aurelius",
+  "url_handlers": [
+    {
+      "origin": "https://tantely.netlify.app"
+    }
+  ]
+}

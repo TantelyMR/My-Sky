@@ -1,0 +1,167 @@
+#welcome {
+  animation: fade-in-render 3.3s ease;
+  position: relative;
+  width: 100%;
+  padding-bottom: 150px;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.profile-container {
+  display: flex;
+  width: 95%;
+  justify-content: space-between;
+  margin-right: 12px;
+}
+
+.profile-container h2 {
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 1.2rem;
+  transition: 300ms ease;
+  margin: 0;
+  margin-left: 7px;
+  cursor: crosshair;
+}
+
+.profile-container h2 strong {
+  color: coral;
+}
+
+.profile-container h2:hover {
+  transition: 300ms ease;
+  transform: scale(110%);
+
+}
+
+.software-title {
+  transition: color 0.3s ease;
+  display: inline-block;
+}
+
+.software-title:hover {
+  color: azure;
+}
+
+.software-title .rainbow {
+  color: hsl(var(--hue), 100%, 85%);
+  display: inline-block;
+}
+
+.software-title .rainbow:nth-child(2) {
+  --hue: 0;
+}
+
+/* Red */
+.software-title .rainbow:nth-child(3) {
+  --hue: 30;
+}
+
+/* Orange */
+.software-title .rainbow:nth-child(4) {
+  --hue: 60;
+}
+
+/* Yellow */
+.software-title .rainbow:nth-child(5) {
+  --hue: 150;
+}
+
+/* Green */
+.software-title .rainbow:nth-child(6) {
+  --hue: 200;
+}
+
+/* Blue */
+.software-title .rainbow:nth-child(7) {
+  --hue: 270;
+}
+
+/* Indigo */
+.software-title .rainbow:nth-child(8) {
+  --hue: 320;
+}
+
+/* Violet */
+
+
+.profile-container h3 {
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 1.1rem;
+}
+
+.profile-pic-container {
+  position: relative;
+  border-radius: 50%;
+  border: 2px solid azure;
+  overflow: hidden;
+  width: 111px;
+  /* adjust as needed */
+  height: 111px;
+}
+
+.profile-pic-container img.profile-pic {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: opacity 0.4s ease-in-out;
+  animation: fade-in-render 0.4s ease-in;
+}
+
+.profile-pic-container img.hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.profile-pic-container img.visible {
+  opacity: 1;
+  z-index: 1;
+  filter: brightness(1.2);
+}
+
+.profile-pic-container:hover {
+  transition: 500ms ease;
+  border: 3px solid bisque;
+  transform: rotate(21deg);
+}
+
+.profile-pic {
+  width: 111px;
+  height: 111px;
+  object-fit: fill;
+  image-rendering: optimizeQuality;
+}
+
+.tech-pic-container {
+  animation: pop-on 5s ease;
+  width: auto;
+  height: 300px;
+  overflow: hidden;
+}
+
+.tech-pic {
+  height: 100%;
+  width: 100%;
+  filter: contrast(1.2) brightness(1);
+  object-fit: contain;
+}
+
+.welcome-text {
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 0.9rem;
+  color: azure;
+  margin-right: 150px;
+  text-align: left;
+  transition: color 0.3s ease;
+  margin: 5px 120px !important;
+}
+
+@media screen and (max-width: 630px) {
+  .welcome-text {
+    margin: 5px 129px 15px 0!important;
+  }
+}
