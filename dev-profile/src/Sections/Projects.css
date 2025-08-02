@@ -1,6 +1,13 @@
 #projects {
   position: relative;
   text-align: center;
+  background-image: url('../assets/images/techs2.png');
+  background-size: 532px 532px;
+  /* or adjust to your desired height */
+  background-position: bottom 200px left 333px;
+  background-repeat: no-repeat;
+  height: 100%;
+  overflow: hidden;
 }
 
 .software-title {
@@ -60,6 +67,7 @@
 }
 
 .project {
+  animation: slide-left-right-in 1s ease;
   display: flex;
   flex-flow: column;
   min-width: 100%;
@@ -78,6 +86,7 @@
   color: mediumaquamarine !important;
   font-size: 0.9rem;
   font-family: 'Courier New', Courier, monospace;
+  text-underline-offset: 3px;
 }
 
 .project-buttons {
@@ -131,8 +140,7 @@
 }
 
 .project p {
-  margin: 0;
-  margin-right: 12px;
+  margin: 0 121px;
   padding: 5px;
   font-size: 0.9rem;
   text-align: justify;
@@ -153,6 +161,7 @@
   gap: 5px;
   border: 1px solid azure;
   border-radius: 15px;
+  background-color: rgba(0, 0, 0, 0.84);
   padding: 5px 10px 0;
   margin-right: 12px;
   width: fit-content;
@@ -167,6 +176,11 @@
   width: fit-content !important;
   margin: 0;
   margin-bottom: 3px;
+  background-color: rgba(14, 107, 110, 0.3);
+  color: aliceblue;
+  transform: scale(105%);
+  border-radius: 10px;
+  padding: 0px 2px 0px;
 }
 
 .tech-stack li:hover {
@@ -199,18 +213,81 @@
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
 
+.media-preview {
+  animation: slide-up-down 1s ease;
+  position: relative;
+  left: 30%;
+  transform: translate(-35%);
+  width: fit-content;
+  height: 520px;
+  margin-top: 12px;
+  border: 1px solid azure;
+  border-radius: 21px;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  overscroll-behavior: none;
+  scrollbar-width: none;
+  display: flex;
+  justify-content: flex-start;
+  scroll-behavior: smooth;
+}
+
+.media-preview img {
+  width: auto;
+  height: 150%;
+  image-rendering: optimizeQuality;
+  opacity: 95%;
+  object-fit: cover;
+}
+
 @media screen and (max-width: 630px) {
+  #projects {
+    background-size: 210px 210px;
+    background-position: bottom 123px left;
+  }
+
   .project p {
+    margin: 0 0;
     font-size: 0.8rem;
   }
 
+  .tech-stack {
+    gap: 0;
+    padding: 0;
+  }
+
   .tech-stack ul {
-  display: flex;
-  flex-flow: wrap;
-  gap: 0px;
-}
+    display: flex;
+    flex-flow: wrap;
+    align-items: flex-end;
+    gap: 3px;
+    margin-top: 3px;
+  }
 
   .tech-stack li {
     font-size: 0.8rem;
+  }
+
+  .project-preview {
+    left: 35%;
+    width: 47%;
+    height: auto;
+    padding: 0;
+    display: flex;
+  }
+
+  .media-preview {
+    position: relative;
+    left: 25%;
+    transform: translate(-35%);
+    width: 70%;
+    height: 150px;
+    align-items: start;
+  }
+
+  .media-preview img {
+    width: 500px;
+    height: auto;
+    object-fit: cover;
   }
 }

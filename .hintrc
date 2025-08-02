@@ -19,7 +19,8 @@
           "scrollbar-width: thin",
           "text-wrap",
           "text-wrap: wrap",
-          "text-wrap: nowrap"
+          "text-wrap: nowrap",
+          "scrollbar-width: none"
         ]
       }
     ]

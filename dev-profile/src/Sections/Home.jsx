@@ -3,6 +3,7 @@ import { useSky } from "../SkyContext";
 
 import EmailButton from "../assets/icons/email-icon.svg?react";
 import LinkedInButton from "../assets/icons/linkedin-icon.svg?react";
+import GithubButton from "../assets/icons/github-icon.svg?react";
 import HomeButton from "../assets/icons/home-icon-4.svg?react";
 import SkillsButton from "../assets/icons/ai-icon-2.svg?react";
 import ProjectsButton from "../assets/icons/light-cool-icon.svg?react";
@@ -37,6 +38,10 @@ function Home() {
 
   const handleLinkedInClick = () => {
     window.open("https://www.linkedin.com/in/tantely-matthieu/", "_blank", "noopener,noreferrer");
+  };
+
+  const handleGithubClick = () => {
+    window.open("https://github.com/TantelyMR/", "_blank", "noopener,noreferrer");
   };
 
   const handleEmailClick = () => {
@@ -183,6 +188,7 @@ function Home() {
             </span>
           </li>
         )}
+
         {showEmailOptions && (
           <div
             ref={emailOptionsRef}
@@ -197,6 +203,14 @@ function Home() {
           <li style={{ position: "relative" }}>
             <span onClick={handleEmailClick} style={{ cursor: "pointer" }}>
               <EmailButton />
+            </span>
+          </li>
+        )}
+
+        {!showEmailOptions && (
+          <li>
+            <span onClick={handleGithubClick} style={{ cursor: "pointer" }}>
+              <GithubButton />
             </span>
           </li>
         )}

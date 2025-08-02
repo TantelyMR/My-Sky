@@ -20,8 +20,6 @@ const SkyProvider = ({ children }) => {
     return () => clearTimeout(timeout);
   }, [mediaMessage]);
 
-  console.log('SkyProvider initialized with mediaMessage:', mediaMessage, 'and serverMessage:', serverMessage);
-
   const contextValue = {
     mediaMessage,
     setMediaMessage,

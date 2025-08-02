@@ -91,12 +91,13 @@
   transition: 500ms ease;
   border: 1px solid aquamarine;
   border-radius: 50%;
-  background-color: azure;
+  background-color: bisque;
   padding: 7px;
   transform: scale(90%) rotate(21deg);
 }
 
 #contact svg {
+  fill: azure;
   width: 25px;
   height: 25px;
 }
@@ -139,7 +140,7 @@
   gap: 5px;
   justify-content: space-around;
   position: fixed;
-  bottom: 33px;
+  bottom: 21px;
   right: 30px;
   width: 120px !important;
   padding: 10px;
