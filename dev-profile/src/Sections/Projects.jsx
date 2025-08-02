@@ -116,6 +116,7 @@ function Projects({ projectsRef }) {
                     <li>Node.js</li>
                     <li>MongoDB</li>
                     <li>Redis</li>
+                    <li>Nginx</li>
                     <li>Typesense</li>
                     <li>Milvus</li>
                     <li>CLIP (OpenAI)</li>
@@ -186,6 +187,7 @@ function Projects({ projectsRef }) {
               <ul>
                 <h4>Infrastructure:</h4>
                 <li>Redis</li>
+                <li>Nginx</li>
                 <li>Cloudflare R2</li>
                 <li>BullMQ</li>
                 <li>OVH Cloud</li>
@@ -221,6 +223,7 @@ function Projects({ projectsRef }) {
               <ul>
                 <h4>Front-End:</h4>
                 <li>React Native</li>
+                <li>Cloudflare</li>
               </ul>
             </div>
             <span>

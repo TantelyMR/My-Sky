@@ -2,12 +2,16 @@ import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react-swc';
 import svgr from 'vite-plugin-svgr';
 import { VitePWA } from 'vite-plugin-pwa';
+import PagesSitemap from 'vite-plugin-pages-sitemap';
 
 // https://vite.dev/config/
 export default defineConfig({
   plugins: [
     svgr(),
     react(),
+    PagesSitemap({
+      hostname: 'https://tantelymr.netlify.app',
+    }),
     VitePWA({
       registerType: 'autoUpdate',
       includeAssets: ['favicon.svg', 'robots.txt', '33S.ico'],

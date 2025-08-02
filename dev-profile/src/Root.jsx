@@ -1,5 +1,6 @@
 import { useEffect, useRef, useState } from 'react';
 import { Outlet } from 'react-router-dom';
+import { Helmet } from 'react-helmet';
 import { useSky } from './SkyContext';
 import SplashScreen from './SplashScreen';
 import StarButton from './assets/icons/favorite-icon.svg?react';
@@ -97,6 +98,41 @@ function Root() {
 
   return (
     <>
+      <Helmet>
+        {/* General SEO */}
+        <title>Tantely Matthieu R. – Full-Stack Software Architect</title>
+        <meta
+          name="description"
+          content="Tantely's Portfolio, a full-stack software architect and engineer. Explore projects, APIs, and expertise across scalable web systems, media processing, and real-time applications."
+        />
+        <meta name="author" content="Tantely Matthieu Rabemananjara" />
+        <meta name="keywords" content="Tantely, Matthieu, software architect, full stack, React, Node.js, portfolio, backend, frontend, Rabemananjara, web developer, PWA, API, media, chat, scalable systems, MongoDB, Redis, Typesense" />
+
+        {/* Open Graph (for social media previews) */}
+        <meta property="og:title" content="Tantely Matthieu Rabemananjara – Full-Stack Engineer" />
+        <meta
+          property="og:description"
+          content="Explore my projects and expertise in scalable backend systems, secure frontends, and cloud-native deployments."
+        />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://tantelymr.netlify.app/" />
+        <meta property="og:image" content="https://tantelymr.netlify.app/33S2.png" />
+
+        {/* Twitter Card */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Tantely Matthieu Rabemananjara – Software Architect" />
+        <meta
+          name="twitter:description"
+          content="My personal portfolio featuring projects like Rebelle Skies, Media Qualifier API, and real-time chat systems."
+        />
+        <meta name="twitter:image" content="https://tantelymr.netlify.app/33S2.png" />
+
+        {/* PWA/iOS enhancements (already in index.html, but duplicating here doesn't hurt) */}
+        <meta name="mobile-web-app-capable" content="yes" />
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+        <link rel="apple-touch-icon" href="/33S2.png" />
+      </Helmet>
       <div id="splash-wrapper">
         <SplashScreen />
       </div>

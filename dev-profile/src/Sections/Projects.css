@@ -218,7 +218,8 @@
   position: relative;
   left: 30%;
   transform: translate(-35%);
-  width: fit-content;
+  width: 70%;
+  max-width: fit-content;
   height: 520px;
   margin-top: 12px;
   border: 1px solid azure;
