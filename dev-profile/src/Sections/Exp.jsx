@@ -1,3 +1,5 @@
+import { useRef, useEffect, useState } from "react";
+
 import RebelleLogo from "../assets/images/rebelleS2.png";
 import ChunsoftLogo from "../assets/images/chunsoft.png";
 import CodecademyLogo from "../assets/images/codecademy.png";
@@ -11,7 +13,6 @@ import LocationIcon from "../assets/icons/location-icon-4.svg?react";
 import ListIcon from "../assets/icons/list-comic-icon.svg?react";
 
 import "./Exp.css";
-import { useRef, useEffect, useState } from "react";
 
 function CustomLeftScrollbar({ scrollTarget }) {
   const trackRef = useRef();
@@ -63,6 +64,31 @@ function Misc({ miscRef }) {
   const [isMobile, setIsMobile] = useState(window.innerWidth <= 630);
   const [swap, setSwap] = useState(false);
 
+  const [showYokoJP, setShowYokoJP] = useState(false);
+  const [showPouzetFR, setShowPouzetFR] = useState(false);
+  const yokoPause = useRef(false);
+  const pouzetPause = useRef(false);
+
+  useEffect(() => {
+    let yokoTimer, pouzetTimer;
+
+    function runYoko() {
+      if (!yokoPause.current) setShowYokoJP(s => !s);
+      yokoTimer = setTimeout(runYoko, 5000);
+    }
+    function runPouzet() {
+      if (!pouzetPause.current) setShowPouzetFR(s => !s);
+      pouzetTimer = setTimeout(runPouzet, 5000);
+    }
+    yokoTimer = setTimeout(runYoko, 5000);
+    pouzetTimer = setTimeout(runPouzet, 5000);
+
+    return () => {
+      clearTimeout(yokoTimer);
+      clearTimeout(pouzetTimer);
+    };
+  }, []);
+
   useEffect(() => {
     const handler = () => setIsMobile(window.innerWidth <= 630);
     window.addEventListener("resize", handler);
@@ -85,12 +111,12 @@ function Misc({ miscRef }) {
         <strong>{`}`}</strong>
       </h2>
 
-        <h3
-          className={`history-toggle ${isMobile && !swap ? "toggled" : ""}`}
-          onClick={() => isMobile && setSwap(false)}
-        >
-          [<span>...</span>History<span>...</span>]
-        </h3>
+      <h3
+        className={`history-toggle ${isMobile && !swap ? "toggled" : ""}`}
+        onClick={() => isMobile && setSwap(false)}
+      >
+        [<span>...</span>History<span>...</span>]
+      </h3>
 
       {(!isMobile || !swap) && (
         <div className={`exp-scroll-outer ${isMobile && swap ? "dimmed-section" : ""}`}>
@@ -228,29 +254,65 @@ function Misc({ miscRef }) {
         </div>
       )}
       <h3
-          className={`testimonials-toggle ${isMobile && swap ? "toggled" : ""}`}
-          onClick={() => isMobile && setSwap(true)}
-        >
-          [<span>...</span>Testimonials<span>...</span>]
-        </h3>
+        className={`testimonials-toggle ${isMobile && swap ? "toggled" : ""}`}
+        onClick={() => isMobile && setSwap(true)}
+      >
+        [<span>...</span>Testimonials<span>...</span>]
+      </h3>
       {(!isMobile || swap) && (
         <div className={`ref-scroll-outer ${isMobile && !swap ? "dimmed-section" : ""}`}>
           <CustomLeftScrollbar scrollTarget={refRef} />
           <div id="references" ref={refRef}>
             <div className="reference">
               <div className="ref-avatar-container">
-                <img src={Yoko} alt="Yoko's avatar picture" onClick={() => { window.open("https://www.linkedin.com/in/yoko-m-2805b857/", "_blank", "noopener,noreferrer"); }}/>
+                <img src={Yoko} alt="Yoko's avatar picture" onClick={() => { window.open("https://www.linkedin.com/in/yoko-m-2805b857/", "_blank", "noopener,noreferrer"); }} />
                 <span onClick={() => { window.open("https://www.linkedin.com/in/yoko-m-2805b857/", "_blank", "noopener,noreferrer"); }}>Yoko Nishikawa</span>
                 <span>Director of Product & Sales at Chunsoft</span>
               </div>
-              <p className="reference-details"><span>"</span>Whether the task at hand was simple or complex, Tantely was always very collaborative & resourceful. And his meticulous attention to details & keen attitude to receive feedback and learn fast often allowed our projects to move smoothly & quickly. His ability to take a subject from a set of drafts and directions to a working prototype has been an incredible asset for us.<span>"</span></p>
+              <p
+                key={showYokoJP ? "jp" : "en"}
+                className="reference-details"
+                onMouseEnter={() => (yokoPause.current = true)}
+                onMouseLeave={() => (yokoPause.current = false)}
+                onTouchStart={() => (yokoPause.current = true)}
+                onTouchEnd={() => (yokoPause.current = false)}
+              >
+                {showYokoJP ? (
+                  <>
+                    <span>「</span>課題が単純なものでも複雑なものでも、タンテリーは常に協力的で発想力豊かでした。細部への細やかな注意と、フィードバックを素直に受け入れて素早く学ぶ姿勢が、私たちのプロジェクトを円滑かつ迅速に進めることを可能にしてくれました。彼がドラフトや指示書から実際に動くプロトタイプまで仕上げる能力は、私たちにとって非常に大きな財産でした。<span>」</span>
+                  </>
+                ) : (
+                  <>
+                    <span>"</span>Whether the task at hand was simple or complex, Tantely was always very collaborative & resourceful. And his meticulous attention to details & keen attitude to receive feedback and learn fast often allowed our projects to move smoothly & quickly. His ability to take a subject from a set of drafts and directions to a working prototype has been an incredible asset for us.<span>"</span>
+                  </>
+                )}
+              </p>
+
             </div>
             <div className="reference">
               <div className="ref-avatar-container">
-                <img src={Pouzet} alt="Pouzet's avatar picture" onClick={() => { window.open("https://www.linkedin.com/in/hardouin-pouzet-b900504a/", "_blank", "noopener,noreferrer"); }}/>
+                <img src={Pouzet} alt="Pouzet's avatar picture" onClick={() => { window.open("https://www.linkedin.com/in/hardouin-pouzet-b900504a/", "_blank", "noopener,noreferrer"); }} />
                 <span onClick={() => { window.open("https://www.linkedin.com/in/hardouin-pouzet-b900504a/", "_blank", "noopener,noreferrer"); }}>Hardouin Pouzet</span>
                 <span>President & Founder at TreeNode</span>
-              <p className="reference-details"><span>"</span>Matthieu was a pleasure to work with during our transition, we were a small team & the need for versatility and independence was crucial. His thirst to learn and understand new technologies & his perseverance has done wonders beyond the scope of his role.<span>"</span></p>
+                <p
+                key={showPouzetFR ? "fr" : "en"}
+                  className="reference-details"
+                  onMouseEnter={() => (pouzetPause.current = true)}
+                  onMouseLeave={() => (pouzetPause.current = false)}
+                  onTouchStart={() => (pouzetPause.current = true)}
+                  onTouchEnd={() => (pouzetPause.current = false)}
+                >
+                  {showPouzetFR ? (
+                    <>
+                      <span>«</span>Travailler avec Matthieu pendant notre phase de transition a été un réel plaisir. Nous étions une petite équipe où la polyvalence et l’autonomie étaient essentielles. Sa soif d’apprendre et de comprendre de nouvelles technologies, ainsi que sa persévérance, ont largement dépassé le cadre de son poste et ont eu un impact très positif sur notre projet.<span>»</span>
+                    </>
+                  ) : (
+                    <>
+                      <span>"</span>Matthieu was a pleasure to work with during our transition, we were a small team & the need for versatility and independence was crucial. His thirst to learn and understand new technologies & his perseverance has done wonders beyond the scope of his role.<span>"</span>
+                    </>
+                  )}
+                </p>
+
               </div>
             </div>
           </div>

@@ -9,7 +9,7 @@
 }
 
 #misc h3 {
-  margin: 5px 0;
+  margin: 0;
   cursor: pointer;
 }
 
@@ -23,9 +23,17 @@
   position: relative;
   width: 100%;
   max-width: 1100px;
-  height: 54%;
+  height: 55%;
   display: flex;
   flex-direction: row;
+}
+
+.exp-scroll-outer {
+  height: 55%;
+}
+
+.ref-scroll-outer {
+  height: 50%;
 }
 
 #experiences,
@@ -251,6 +259,7 @@
 }
 
 .reference-details {
+  animation: slide-right-left-in 1200ms ease;
   font-size: 0.87rem;
   margin: 0 18px;
 }
