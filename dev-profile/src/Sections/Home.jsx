@@ -13,13 +13,13 @@ import "./Home.css";
 import Welcome from "./Welcome";
 import Skills from "./Skills";
 import Projects from "./Projects";
-import Misc from "./Misc";
+import Misc from "./Exp.jsx";
 
 function Home() {
   const { setMediaMessage, setServerMessage } = useSky();
   const [showEmailOptions, setShowEmailOptions] = useState(false);
   const [activeSection, setActiveSection] = useState("welcome");
-  const email = "tantely.matthieu@gmail.com";
+  const email = "tantely.m.ra@gmail.com";
 
   const contactRef = useRef(null);
   const emailOptionsRef = useRef(null);
@@ -41,7 +41,7 @@ function Home() {
   };
 
   const handleGithubClick = () => {
-    window.open("https://github.com/TantelyMR/", "_blank", "noopener,noreferrer");
+    window.open("https://github.com/TantelyMR?tab=repositories", "_blank", "noopener,noreferrer");
   };
 
   const handleEmailClick = () => {
@@ -195,13 +195,13 @@ function Home() {
             className="email-options"
             onClick={(e) => e.stopPropagation()}
           >
-            <button onClick={handleCopyEmail}>Copy Email</button>
-            <button onClick={handleMailTo}>Open in Mail</button>
+            <button aria-label="Copy Tantely's e-mail"onClick={handleCopyEmail}>Copy Email</button>
+            <button aria-label="Send Tantely an e-mail" onClick={handleMailTo}>Open in Mail</button>
           </div>
         )}
         {!showEmailOptions && (
           <li style={{ position: "relative" }}>
-            <span onClick={handleEmailClick} style={{ cursor: "pointer" }}>
+            <span aria-label="Send Tantely an e-mail" onClick={handleEmailClick} style={{ cursor: "pointer" }}>
               <EmailButton />
             </span>
           </li>
@@ -209,7 +209,7 @@ function Home() {
 
         {!showEmailOptions && (
           <li>
-            <span onClick={handleGithubClick} style={{ cursor: "pointer" }}>
+            <span aria-label="View your Tantely's projects on github" onClick={handleGithubClick} style={{ cursor: "pointer" }}>
               <GithubButton />
             </span>
           </li>
@@ -239,7 +239,7 @@ function Home() {
           className={activeSection === "misc" ? "active" : ""}
           onClick={() => scrollToSection("misc")}
         >
-          <BackgroundButton /> Misc
+          <BackgroundButton /> Exp
         </li>
       </ul>
       <div id="custom-scrollbar">

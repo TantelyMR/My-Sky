@@ -140,7 +140,7 @@
   gap: 5px;
   justify-content: space-around;
   position: fixed;
-  bottom: 21px;
+  bottom: 15px;
   right: 30px;
   width: 120px !important;
   padding: 10px;
@@ -183,7 +183,7 @@
   transition: 500ms ease;
   list-style: circle;
   width: fit-content;
-  background-color: mediumaquamarine;
+  background-color: rgba(102, 205, 171, 0.9);
   padding: 7px 5px 3px;
   color: black;
   transform: scale(110%);

@@ -4,6 +4,7 @@ import { Helmet } from 'react-helmet';
 import { useSky } from './SkyContext';
 import SplashScreen from './SplashScreen';
 import StarButton from './assets/icons/favorite-icon.svg?react';
+import UmbrellaButton from './assets/icons/umbrella-icon.svg?react'
 import './rain.css';
 
 function Root() {
@@ -116,7 +117,7 @@ function Root() {
         />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://tantelymr.netlify.app/" />
-        <meta property="og:image" content="https://tantelymr.netlify.app/33S2.png" />
+        <meta property="og:image" content="https://tantelymr.netlify.app/preview.png" />
 
         {/* Twitter Card */}
         <meta name="twitter:card" content="summary_large_image" />
@@ -125,7 +126,7 @@ function Root() {
           name="twitter:description"
           content="My personal portfolio featuring projects like Rebelle Skies, Media Qualifier API, and real-time chat systems."
         />
-        <meta name="twitter:image" content="https://tantelymr.netlify.app/33S2.png" />
+        <meta name="twitter:image" content="https://tantelymr.netlify.app/preview.png" />
 
         {/* PWA/iOS enhancements (already in index.html, but duplicating here doesn't hurt) */}
         <meta name="mobile-web-app-capable" content="yes" />
@@ -166,7 +167,7 @@ function Root() {
             onClick={() => setRainActive(!rainActive)}
             title={rainActive ? "Rain is active" : "Start rain"}
           >
-            {rainActive ? <StarButton /> : '☂️'}
+            {rainActive ? <StarButton /> : <UmbrellaButton />}
           </div>
         </div>
         <main>

@@ -81,7 +81,7 @@ function Projects({ projectsRef }) {
         {activeProject === "rebelle" && (
           <div className="project">
             <h3>
-              Rebelle <a href="https://rebelle.app">[https://rebelle.app]</a>
+              Rebelle <a href="https://rebelle.app">[rebelle.app]</a>
             </h3>
 
             <div className="project-buttons">
@@ -104,7 +104,7 @@ function Projects({ projectsRef }) {
                 <p>
                   I selected Rebelle Skies's entire tech stack, programmed its
                   back-end and designed the front-end. It is available on all
-                  major platforms as it can be installed as a progressive app
+                  major platforms installed as a progressive app
                   on iOS, Android and any desktop browser. Analytics through
                   Python pipelines and data is encrypted in transition & at
                   rest.
@@ -152,6 +152,7 @@ function Projects({ projectsRef }) {
                   autoPlay
                   preload="auto"
                   style={{ maxWidth: "100%", height: "auto" }}
+                  aria-label="Rebelle App Preview"
                 >
                   <source
                     src="https://cdn.rebelle.app/lapinou_1754111268307/media_0/e9MBT9JbAf1_720p.webm"
@@ -165,7 +166,11 @@ function Projects({ projectsRef }) {
 
         {activeProject === "media" && (
           <div className="project">
-            <h3>Media Qualifier API</h3>
+            <h3>Media Qualifier API</h3> <span>
+              Repo: <a aria-label="View your Tantely's projects on github" onClick={() => {
+                window.open("https://github.com/TantelyMR?tab=repositories", "_blank", "noopener,noreferrer");
+              }}>[Github-MediaAPI]</a>
+            </span>
             <p>
               High-performance API that detects NSFW and inappropriate media
               using multi-layered classifiers. This API was developed as an
@@ -181,7 +186,6 @@ function Projects({ projectsRef }) {
                 <li>FastAPI</li>
                 <li>NSFWjs</li>
                 <li>CLIP</li>
-                <li>NudeNet</li>
                 <li>ShieldGemma2</li>
               </ul>
               <ul>
@@ -193,9 +197,6 @@ function Projects({ projectsRef }) {
                 <li>OVH Cloud</li>
               </ul>
             </div>
-            <span>
-              Repo: <a href="https://github.com/TantelyMR/">[Github]</a>
-            </span>
             <div className="media-preview" ref={mediaRef1}>
               <img src={ProjectPrev1} alt="Media Qualifier API Preview" />
             </div>
@@ -204,7 +205,11 @@ function Projects({ projectsRef }) {
 
         {activeProject === "chat" && (
           <div className="project">
-            <h3>Chat API</h3>
+            <h3>Chat API</h3><span>
+              Repo: <a aria-label="View your Tantely's projects on github" onClick={() => {
+                window.open("https://github.com/TantelyMR?tab=repositories", "_blank", "noopener,noreferrer");
+              }}>[Github - ChatAPI]</a>
+            </span>
             <p>
               Minimalist but fully featured chat engine including messaging,
               reactions, media attachments, typing indicators, and WebSocket
@@ -226,9 +231,6 @@ function Projects({ projectsRef }) {
                 <li>Cloudflare</li>
               </ul>
             </div>
-            <span>
-              Repo: <a href="https://github.com/TantelyMR/">[Github]</a>
-            </span>
             <div className="media-preview" ref={mediaRef2}>
               <img src={ProjectPrev2} alt="Chat API Preview" />
             </div>

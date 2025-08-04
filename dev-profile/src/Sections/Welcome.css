@@ -87,6 +87,7 @@
 
 
 .profile-container h3 {
+  color: azure;
   font-family: 'Courier New', Courier, monospace;
   font-size: 1.1rem;
 }
@@ -99,6 +100,7 @@
   width: 111px;
   /* adjust as needed */
   height: 111px;
+  cursor: crosshair;
 }
 
 .profile-pic-container img.profile-pic {
@@ -153,7 +155,7 @@
 .welcome-text {
   font-family: 'Courier New', Courier, monospace;
   font-size: 0.9rem;
-  color: azure;
+  color: azure !important;
   margin-right: 150px;
   text-align: left;
   transition: color 0.3s ease;

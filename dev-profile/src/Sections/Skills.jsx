@@ -114,8 +114,8 @@ function Skills({ skillsRef }) {
       </div>
 
       <div className={`skill-details ${activeCategory === "frontend" ? "show" : ""}`}>
-        <p>I like to design versatile applications, leveraging mutli-platform tools allowing applications to reach the widest possible audience without compromising performance or development speed.</p>
-        <ul> Some front-end technologies I use:
+        <p>I like to design <strong>versatile</strong> applications, leveraging <strong>mutli-platform</strong> tools allowing applications to reach the widest possible audience without compromising performance or development speed.</p>
+        <ul> Some tech I use:
           <li>React Native - Capacitor</li>
           <li>React - Next - Vue</li>
           <li>HTML, CSS</li>
@@ -127,28 +127,29 @@ function Skills({ skillsRef }) {
       </div>
 
       <div className={`skill-details ${activeCategory === "backend" ? "show" : ""}`}>
-        <p>I have a passion for building efficient and secure api adhering to RESTful  principles. I'm most comfortable with NodeJS ecosystem but I have good experience using FastAPI too.</p>
-        <ul> Some back-end technologies I use:
+        <p>I have a passion for building <strong>efficient and secure api</strong> adhering to <strong>RESTful</strong>  principles. I'm most comfortable programming on <strong>Linux (Debian) with NodeJS ecosystem</strong> but I have good experience <strong>Python based</strong> ecos as well (FastAPI-Flask) too.</p>
+        <ul> Some tech I use:
           <li>NodeJS (Express) - Fastify - FastAPI</li>
           <li>Server Resource Management (Metrics, PM2, systemd)</li>
           <li>Python - JS - Linux- Bash</li>
           <li>MongoDB - PostgreSQL</li>
           <li>Redis - BullMQ</li>
           <li>Websocket</li>
+          <li>CLIP (OpenAI) - Gemma 3 (Google)</li>
           <li>Milus - Typesense</li>
         </ul>
       </div>
 
       <div className={`skill-details ${activeCategory === "cloud" ? "show" : ""}`}>
-        <p>Cloud technologies handleMouseMove become a necessity where performance and availability is crucial. I've developed apps through CI/CD pipelines and mutiple cloud technologies to ensure high scalability and efficiency.</p>
+        <p>Cloud technologies are a necessity where <strong>performance, scalability and availability</strong> is crucial. I've developed apps through CI/CD pipelines and mutiple cloud technologies to ensure high scalability and efficiency.</p>
         <ul>
           <li>AWS SDKs - GCP - DigitalOcean - OHV Cloud</li>
           <li>Cloud Storage (R2-S3) - CDN (Cloudflare-Akamai)</li>
           <li>Nginx, Load Balancing</li>
-          <li>Security (Rate Limiting, DDoS, Virus Scanning...)</li>
+          <li>Security (Rate limiting, DDoS mitigation, Virus Scanning...)</li>
           <li>Docker - Kubernetes</li>
         </ul>
-        <p className="skill-additional">I also like to use and optimize AI/ML models such as <strong>CLIP (OpenAI), Gemma (Google), and Lama (Meta)</strong> and integrate them without relying on certain third-party apis calls to save on cost.</p>
+        <p className="skill-additional" style={{ margin: "0 115px 0 0 !important" }}>I also like to use and optimize AI/ML models such as <strong>CLIP (OpenAI), Gemma (Google), and Lama (Meta)</strong> and integrate them without relying on certain third-party apis calls to save on cost.</p>
       </div>
     </div>
   );

@@ -1,13 +1,25 @@
 #projects {
   position: relative;
   text-align: center;
+  height: 100%;
+  overflow: hidden;
+}
+
+#projects::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
   background-image: url('../assets/images/techs2.png');
   background-size: 532px 532px;
   /* or adjust to your desired height */
   background-position: bottom 200px left 333px;
   background-repeat: no-repeat;
+  opacity: 0.7;
   height: 100%;
-  overflow: hidden;
+  z-index: -1;
 }
 
 .software-title {
@@ -144,6 +156,7 @@
   padding: 5px;
   font-size: 0.9rem;
   text-align: justify;
+  text-shadow: 1px 1px 1px black;
 }
 
 .tech-stack {
@@ -174,10 +187,10 @@
   transition: 300ms ease;
   cursor: crosshair;
   width: fit-content !important;
-  margin: 0;
+  margin: 0px;
   margin-bottom: 3px;
-  background-color: rgba(14, 107, 110, 0.3);
-  color: aliceblue;
+  background-color: rgba(6, 66, 90, 0.21);
+  color: rgba(125, 224, 224, 0.89);
   transform: scale(105%);
   border-radius: 10px;
   padding: 0px 2px 0px;
@@ -188,10 +201,14 @@
   background-color: rgba(14, 107, 110, 0.432);
   color: aquamarine;
   transform: scale(105%);
-  border: 1px solid black;
+  border: 1px solid turquoise;
   border-radius: 10px;
   padding: 3px 5px 3px;
   width: fit-content !important;
+}
+
+.project a {
+  color: lightsalmon;
 }
 
 .project-preview {
@@ -200,6 +217,7 @@
   left: 50%;
   transform: translate(-50%);
   width: 40%;
+  max-height: 1080px;
   border: 2px solid azure;
   border-radius: 21px;
   overflow: hidden;
@@ -242,7 +260,7 @@
 }
 
 @media screen and (max-width: 630px) {
-  #projects {
+  #projects::before {
     background-size: 210px 210px;
     background-position: bottom 123px left;
   }

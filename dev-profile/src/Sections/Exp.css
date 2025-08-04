@@ -1,0 +1,317 @@
+#misc {
+  position: relative;
+  text-align: center;
+  display: flex;
+  flex-flow: column;
+  gap: 0;
+  width: 100%;
+  padding: 0 5px;
+}
+
+#misc h3 {
+  margin: 5px 0;
+  cursor: pointer;
+}
+
+#misc h3 span {
+  font-size: 1.5rem;
+  color: turquoise;
+}
+
+.exp-scroll-outer,
+.ref-scroll-outer {
+  position: relative;
+  width: 100%;
+  max-width: 1100px;
+  height: 54%;
+  display: flex;
+  flex-direction: row;
+}
+
+#experiences,
+#references {
+  animation: slide-down-up 1s ease;
+  flex: 1 1 auto;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  scrollbar-width: none;
+  /* Hide native */
+  margin-left: 0;
+  scroll-behavior: smooth;
+  padding-top: 5px;
+  padding-right: 17px;
+  /* space for left scrollbar */
+  border-radius: 15px;
+}
+
+.left-custom-scrollbar.custom-scrollbar-track {
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 13px;
+  background: transparent;
+  z-index: 3;
+  border-radius: 9px;
+  display: flex;
+  align-items: flex-start;
+}
+
+.custom-scrollbar-thumb {
+  width: 3px;
+  background: linear-gradient(120deg, burlywood 50%, mediumaquamarine);
+  border-radius: 8px;
+  margin: 2px 0 2px 2px;
+  transition: background 0.2s;
+  box-shadow: 0 2px 8px 2px rgba(0, 255, 255, 0.10);
+}
+
+.left-custom-scrollbar.custom-scrollbar-track:hover .custom-scrollbar-thumb {
+  background: linear-gradient(100deg, azure, turquoise, mediumaquamarine, bisque 75%);
+}
+
+.experience {
+  position: relative;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-around;
+  width: 100%;
+  gap: 5px;
+  padding-bottom: 73px;
+  margin-bottom: 12px;
+}
+
+.place {
+  display: flex;
+  flex-flow: column;
+  align-items: flex-start;
+  gap: 0px;
+  margin: 0;
+  margin-left: 10px;
+  padding: 0;
+  width: 30%;
+}
+
+.place-logo-container {
+  width: 75px;
+  height: 75px;
+  border: 2px mediumaquamarine solid;
+  border-radius: 21px;
+  overflow: hidden;
+  margin-left: 12px;
+}
+
+.place-logo-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.place-date {
+  font-size: 0.85rem;
+  text-wrap: nowrap;
+}
+
+.place-link {
+  color: bisque;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 0.95rem;
+  text-wrap: wrap;
+  margin: 5px 0 0;
+}
+
+.place-location {
+  margin: 0;
+  padding: 0;
+  font-size: 0.85rem;
+}
+
+.place p {
+  text-align: left;
+  text-wrap: nowrap;
+}
+
+.place svg {
+  fill: azure;
+  width: 18px;
+  height: 18px;
+  margin-right: 5px;
+  position: relative;
+  top: 5px;
+}
+
+.role-container {
+  display: flex;
+  flex-flow: column;
+  align-items: flex-end;
+  justify-content: center;
+  min-width: 70% !important;
+  width: 70% !important;
+}
+
+.role-name {
+  border-bottom: 1px solid;
+  border-radius: 5px;
+  color: rgba(39, 221, 166, 0.788);
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: bold;
+  font-size: 0.95rem;
+}
+
+.role-details {
+  width: 80%;
+  font-size: 0.9rem;
+  text-align: left;
+  margin: 5px 0 0 0;
+}
+
+.role-skills {
+  position: absolute;
+  bottom: -10px;
+  list-style: none;
+  display: flex;
+  gap: 5px;
+  min-width: 100%;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 0.8rem;
+  width: 80%;
+  overflow-y: hidden;
+  overflow-x: scroll;
+  scroll-behavior: smooth;
+  scrollbar-width: none;
+}
+
+.role-skills li {
+  background-color: rgba(17, 95, 100, 0.301);
+  border: 1px solid rgba(64, 224, 208, 0.21);
+  border-radius: 15px;
+  color: rgb(55, 224, 207);
+  font-size: 0.75rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2px 7px !important;
+  height: fit-content;
+  position: relative;
+  right: 33px;
+  cursor: crosshair;
+  transition: 300ms ease;
+}
+
+.role-skills li:hover {
+  transition: 300ms ease;
+  background-color: azure;
+  color: black;
+}
+
+.place-location,
+.place-date {
+  color: rgba(185, 216, 228, 0.7);
+}
+
+#references {
+  display: flex;
+  gap: 5px;
+  margin-top: 12px;
+  margin-left: 12px;
+}
+
+.reference {
+  margin-right: 12px;
+}
+
+.ref-avatar-container {
+  display: flex;
+  flex-flow: column wrap;
+  align-items: flex-end;
+  margin-right: 15px;
+}
+
+.ref-avatar-container img {
+  width: 75px;
+  height: 75px;
+  border: 2px double azure;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.ref-avatar-container span {
+  font-size: 0.9rem;
+}
+
+.ref-avatar-container span:nth-child(2) {
+  color: mediumaquamarine;
+  cursor: pointer;
+}
+
+
+.ref-avatar-container span:nth-child(3) {
+  font-size: 0.8rem;
+  color: rgba(245, 233, 216, 0.63);
+}
+
+.reference-details {
+  font-size: 0.87rem;
+  margin: 0 18px;
+}
+
+.reference-details span {
+  color: orange;
+}
+
+@media screen and (max-width: 630px) {
+  .role-name {
+    font-size: 0.85rem;
+  }
+
+
+  .role-details {
+    width: 83%;
+  }
+
+  .role-details {
+    font-size: 0.86rem;
+  }
+
+  .role-skills {
+    bottom: -19px;
+  }
+
+  .place-location,
+  .place-date {
+    font-size: 0.8rem;
+  }
+
+
+  #references {
+    flex-flow: column;
+  }
+
+  .exp-scroll-outer,
+  .ref-scroll-outer {
+    transition: opacity 0.3s;
+  }
+
+  .dimmed-section {
+    opacity: 0.34;
+    filter: blur(1.5px) grayscale(0.25);
+    pointer-events: none;
+    -webkit-user-select: none;
+    user-select: none;
+  }
+
+  .history-toggle,
+  .testimonials-toggle {
+    cursor: pointer;
+    transition: color 0.2s, text-shadow 0.2s;
+    color: #70ffe7;
+    opacity: 0.7;
+  }
+
+  .history-toggle.toggled,
+  .testimonials-toggle.toggled {
+    color: wheat;
+    opacity: 1;
+    text-shadow: 0 1px 9px #1e3f4a;
+  }
+}

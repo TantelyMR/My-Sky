@@ -1,6 +1,7 @@
 * {
   box-sizing: border-box;
   -webkit-tap-highlight-color: transparent;
+  color: rgba(240, 255, 255, 0.75);
 }
 
 html {
@@ -28,6 +29,10 @@ html::-webkit-scrollbar,
 body::-webkit-scrollbar {
   display: none;
   /* Chrome, Safari, Opera */
+}
+
+a {
+  cursor: pointer;
 }
 
 .splash-screen {
