@@ -226,6 +226,7 @@
 
 .reference {
   margin-right: 12px;
+  max-width: 34% !important;
 }
 
 .ref-avatar-container {
@@ -260,8 +261,9 @@
 
 .reference-details {
   animation: fade-in-render 1200ms ease;
-  font-size: 0.87rem;
+  font-size: 0.75rem;
   margin: 0 18px;
+  width: 100%;
 }
 
 .reference-details span {
@@ -272,7 +274,6 @@
   .role-name {
     font-size: 0.85rem;
   }
-
 
   .role-details {
     width: 83%;
@@ -294,6 +295,14 @@
 
   #references {
     flex-flow: column;
+  }
+
+  .reference {
+    max-width: 100% !important;
+  }
+
+  reference-details {
+    font-size: 0.82rem;
   }
 
   .exp-scroll-outer,

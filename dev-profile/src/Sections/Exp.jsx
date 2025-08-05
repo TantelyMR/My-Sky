@@ -84,12 +84,12 @@ function Misc({ miscRef }) {
       pouzetTimer = setTimeout(runPouzet, 5000);
     }
     function runPaul() {
-        if (!paulPause.current) setShowPaulFR(s => !s);
+      if (!paulPause.current) setShowPaulFR(s => !s);
       paulTimer = setTimeout(runPaul, 5000);
     }
     yokoTimer = setTimeout(runYoko, 5000);
     pouzetTimer = setTimeout(runPouzet, 5000);
-    paulTimer= setTimeout(runPaul, 5000);
+    paulTimer = setTimeout(runPaul, 5000);
 
     return () => {
       clearTimeout(yokoTimer);
@@ -269,9 +269,37 @@ function Misc({ miscRef }) {
         [<span>...</span>Testimonials<span>...</span>]
       </h3>
       {(!isMobile || swap) && (
+
         <div className={`ref-scroll-outer ${isMobile && !swap ? "dimmed-section" : ""}`}>
           <CustomLeftScrollbar scrollTarget={refRef} />
           <div id="references" ref={refRef}>
+            <div className="reference">
+              <div className="ref-avatar-container">
+                <img src={Paul} alt="Paul's avatar picture" onClick={() => { window.open("https://www.linkedin.com/in/paul-duvallet-624822378/", "_blank", "noopener,noreferrer"); }} />
+                <span onClick={() => { window.open("https://www.linkedin.com/in/paul-duvallet-624822378/", "_blank", "noopener,noreferrer"); }}>Paul Duvallet</span>
+                <span>Software Architect at TreeNode</span>
+                <p
+                  key={showPaulFR ? "fr" : "en"}
+                  className="reference-details"
+                  onMouseEnter={() => (paulPause.current = true)}
+                  onMouseLeave={() => (paulPause.current = false)}
+                  onTouchStart={() => (paulPause.current = true)}
+                  onTouchEnd={() => (paulPause.current = false)}
+                >
+                  {showPaulFR ? (
+                    <>
+                      <span>«</span>Matthieu n’est pas seulement un ingénieur — avant tout, c’est un partenaire qui apporte une attention et un soin exceptionnels tant à son propre travail qu’à la vision d’ensemble, ce qui a rendu notre collaboration des plus fluides. Il a également un véritable talent pour comprendre le potentiel des outils que nous avons mis à sa disposition, et pour les utiliser, les améliorer et ainsi faire avancer nos objectifs bien au-delà de ce que nous avions imaginé. Mais par-dessus tout, j’ai trouvé sa créativité remarquable — que ce soit dans sa manière d’aborder les problèmes différemment ou simplement de proposer des idées de fonctionnalités originales. J’ai hâte de voir où cette créativité et ce souci du détail le mèneront.<span>»</span>
+                    </>
+                  ) : (
+                    <>
+                      <span>"</span>Matthieu is not just an engineer, before that he is a partner that brings exceptional care and attention to both his own work and the big picture, and that made for the smoothest collaboration. He also has a knack for understanding the power of the tools we made available to him and how to use and improve upon them to push our goals and much farther. And most of all, I found his creativity quite remarkable whether he used it to approach a problem differently or simply to brainstorm some cool features. I can't wait to see where he takes such creativity and care.<span>"</span>
+                    </>
+                  )}
+                </p>
+
+              </div>
+            </div>
+
             <div className="reference">
               <div className="ref-avatar-container">
                 <img src={Yoko} alt="Yoko's avatar picture" onClick={() => { window.open("https://www.linkedin.com/in/yoko-m-2805b857/", "_blank", "noopener,noreferrer"); }} />
@@ -298,32 +326,7 @@ function Misc({ miscRef }) {
               </p>
 
             </div>
-            <div className="reference">
-              <div className="ref-avatar-container">
-                <img src={Paul} alt="Paul's avatar picture" onClick={() => { window.open("https://www.linkedin.com/in/paul-duvallet-624822378/", "_blank", "noopener,noreferrer"); }} />
-                <span onClick={() => { window.open("https://www.linkedin.com/in/paul-duvallet-624822378/", "_blank", "noopener,noreferrer"); }}>Paul Duvallet</span>
-                <span>Software Architect at TreeNode</span>
-                <p
-                  key={showPaulFR ? "fr" : "en"}
-                  className="reference-details"
-                  onMouseEnter={() => (paulPause.current = true)}
-                  onMouseLeave={() => (paulPause.current = false)}
-                  onTouchStart={() => (paulPause.current = true)}
-                  onTouchEnd={() => (paulPause.current = false)}
-                >
-                  {showPaulFR ? (
-                    <>
-                      <span>«</span>Matthieu n’est pas seulement un ingénieur — avant tout, c’est un partenaire qui apporte une attention et un soin exceptionnels tant à son propre travail qu’à la vision d’ensemble, ce qui a rendu notre collaboration des plus fluides. Il a également un véritable talent pour comprendre le potentiel des outils que nous avons mis à sa disposition, et pour les utiliser, les améliorer et ainsi faire avancer nos objectifs bien au-delà de ce que nous avions imaginé. Mais par-dessus tout, j’ai trouvé sa créativité remarquable — que ce soit dans sa manière d’aborder les problèmes différemment ou simplement de proposer des idées de fonctionnalités originales. J’ai hâte de voir où cette créativité et ce souci du détail le mèneront.<span>»</span>
-                    </>
-                  ) : (
-                    <>
-                      <span>"</span>Matthieu is not just an engineer, before that he is partner that brings exceptional care and attention to both his own work and the big picture, and that made for the smoothest collaboration. He also has a knack for understanding the power of the tools we made available to him and how to use and improve upon them to push our goals and much farther. And most of all, I found his creativity quite remarkable whether he used to approach a problem differently or simply to brainstorm some cool features. I can't wait to see where he takes such creativity and care.<span>"</span>
-                    </>
-                  )}
-                </p>
 
-              </div>
-            </div>
             <div className="reference">
               <div className="ref-avatar-container">
                 <img src={Pouzet} alt="Pouzet's avatar picture" onClick={() => { window.open("https://www.linkedin.com/in/hardouin-pouzet-b900504a/", "_blank", "noopener,noreferrer"); }} />
