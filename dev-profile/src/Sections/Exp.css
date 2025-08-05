@@ -259,7 +259,7 @@
 }
 
 .reference-details {
-  animation: slide-right-left-in 1200ms ease;
+  animation: fade-in-render 1200ms ease;
   font-size: 0.87rem;
   margin: 0 18px;
 }

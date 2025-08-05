@@ -59,7 +59,7 @@ function Skills({ skillsRef }) {
     intervalRef.current = setInterval(() => {
       setActiveCategory(CATEGORIES[cycleIndex.current % CATEGORIES.length]);
       cycleIndex.current += 1;
-    }, 3000);
+    }, 3900);
 
     return () => clearInterval(intervalRef.current);
   }, [hasUserInteracted]);

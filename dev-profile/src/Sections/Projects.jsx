@@ -168,7 +168,7 @@ function Projects({ projectsRef }) {
           <div className="project">
             <h3>Media Qualifier API</h3> <span>
               Repo: <a aria-label="View your Tantely's projects on github" onClick={() => {
-                window.open("https://github.com/TantelyMR?tab=repositories", "_blank", "noopener,noreferrer");
+                window.open("https://github.com/TantelyMR/MediaAPI", "_blank", "noopener,noreferrer");
               }}>[Github-MediaAPI]</a>
             </span>
             <p>
@@ -207,7 +207,7 @@ function Projects({ projectsRef }) {
           <div className="project">
             <h3>Chat API</h3><span>
               Repo: <a aria-label="View your Tantely's projects on github" onClick={() => {
-                window.open("https://github.com/TantelyMR?tab=repositories", "_blank", "noopener,noreferrer");
+                window.open("https://github.com/TantelyMR/ChatAPI", "_blank", "noopener,noreferrer");
               }}>[Github - ChatAPI]</a>
             </span>
             <p>
