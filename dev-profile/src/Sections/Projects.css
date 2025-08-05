@@ -13,9 +13,9 @@
   right: 0;
   bottom: 0;
   background-image: url('../assets/images/techs2.png');
-  background-size: 532px 532px;
+  background-size: 332px 332px;
   /* or adjust to your desired height */
-  background-position: bottom 200px left 333px;
+  background-position: bottom 50px left 430px;
   background-repeat: no-repeat;
   opacity: 0.7;
   height: 100%;
@@ -216,16 +216,18 @@
   position: relative;
   left: 50%;
   transform: translate(-50%);
-  width: 40%;
-  max-height: 1080px;
+  width: fit-content;
+  max-height: 660px;
   border: 2px solid azure;
   border-radius: 21px;
+  margin-top: 5px;
   overflow: hidden;
 }
 
 .project-preview video {
   width: auto;
   height: 100%;
+  max-height: 660px;
   border-radius: 10px;
   object-fit: cover;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
