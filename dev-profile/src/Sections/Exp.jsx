@@ -8,6 +8,7 @@ import LaunchSchool from "../assets/images/launchschool.png";
 import WdLogo from "../assets/images/wd.png";
 import Pouzet from "../assets/images/picture4.png";
 import Yoko from "../assets/images/picture5.png";
+import Paul from "../assets/images/picture6.png";
 
 import LocationIcon from "../assets/icons/location-icon-4.svg?react";
 import ListIcon from "../assets/icons/list-comic-icon.svg?react";
@@ -66,11 +67,13 @@ function Misc({ miscRef }) {
 
   const [showYokoJP, setShowYokoJP] = useState(false);
   const [showPouzetFR, setShowPouzetFR] = useState(false);
+  const [showPaulFR, setShowPaulFR] = useState(false);
   const yokoPause = useRef(false);
   const pouzetPause = useRef(false);
+  const paulPause = useRef(false);
 
   useEffect(() => {
-    let yokoTimer, pouzetTimer;
+    let yokoTimer, pouzetTimer, paulTimer;
 
     function runYoko() {
       if (!yokoPause.current) setShowYokoJP(s => !s);
@@ -80,12 +83,18 @@ function Misc({ miscRef }) {
       if (!pouzetPause.current) setShowPouzetFR(s => !s);
       pouzetTimer = setTimeout(runPouzet, 5000);
     }
+    function runPaul() {
+        if (!paulPause.current) setShowPaulFR(s => !s);
+      paulTimer = setTimeout(runPaul, 5000);
+    }
     yokoTimer = setTimeout(runYoko, 5000);
     pouzetTimer = setTimeout(runPouzet, 5000);
+    paulTimer= setTimeout(runPaul, 5000);
 
     return () => {
       clearTimeout(yokoTimer);
       clearTimeout(pouzetTimer);
+      clearTimeout(paulTimer);
     };
   }, []);
 
@@ -291,11 +300,37 @@ function Misc({ miscRef }) {
             </div>
             <div className="reference">
               <div className="ref-avatar-container">
+                <img src={Paul} alt="Paul's avatar picture" onClick={() => { window.open("https://www.linkedin.com/in/paul-duvallet-624822378/", "_blank", "noopener,noreferrer"); }} />
+                <span onClick={() => { window.open("https://www.linkedin.com/in/paul-duvallet-624822378/", "_blank", "noopener,noreferrer"); }}>Paul Duvallet</span>
+                <span>Software Architect at TreeNode</span>
+                <p
+                  key={showPaulFR ? "fr" : "en"}
+                  className="reference-details"
+                  onMouseEnter={() => (paulPause.current = true)}
+                  onMouseLeave={() => (paulPause.current = false)}
+                  onTouchStart={() => (paulPause.current = true)}
+                  onTouchEnd={() => (paulPause.current = false)}
+                >
+                  {showPaulFR ? (
+                    <>
+                      <span>«</span>Matthieu n’est pas seulement un ingénieur — avant tout, c’est un partenaire qui apporte une attention et un soin exceptionnels tant à son propre travail qu’à la vision d’ensemble, ce qui a rendu notre collaboration des plus fluides. Il a également un véritable talent pour comprendre le potentiel des outils que nous avons mis à sa disposition, et pour les utiliser, les améliorer et ainsi faire avancer nos objectifs bien au-delà de ce que nous avions imaginé. Mais par-dessus tout, j’ai trouvé sa créativité remarquable — que ce soit dans sa manière d’aborder les problèmes différemment ou simplement de proposer des idées de fonctionnalités originales. J’ai hâte de voir où cette créativité et ce souci du détail le mèneront.<span>»</span>
+                    </>
+                  ) : (
+                    <>
+                      <span>"</span>Matthieu is not just an engineer, before that he is partner that brings exceptional care and attention to both his own work and the big picture, and that made for the smoothest collaboration. He also has a knack for understanding the power of the tools we made available to him and how to use and improve upon them to push our goals and much farther. And most of all, I found his creativity quite remarkable whether he used to approach a problem differently or simply to brainstorm some cool features. I can't wait to see where he takes such creativity and care.<span>"</span>
+                    </>
+                  )}
+                </p>
+
+              </div>
+            </div>
+            <div className="reference">
+              <div className="ref-avatar-container">
                 <img src={Pouzet} alt="Pouzet's avatar picture" onClick={() => { window.open("https://www.linkedin.com/in/hardouin-pouzet-b900504a/", "_blank", "noopener,noreferrer"); }} />
                 <span onClick={() => { window.open("https://www.linkedin.com/in/hardouin-pouzet-b900504a/", "_blank", "noopener,noreferrer"); }}>Hardouin Pouzet</span>
                 <span>President & Founder at TreeNode</span>
                 <p
-                key={showPouzetFR ? "fr" : "en"}
+                  key={showPouzetFR ? "fr" : "en"}
                   className="reference-details"
                   onMouseEnter={() => (pouzetPause.current = true)}
                   onMouseLeave={() => (pouzetPause.current = false)}
